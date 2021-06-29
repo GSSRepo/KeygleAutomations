@@ -3,10 +3,17 @@
 //   fileReader.onload = function () {
 //     let parsedJSON = JSON.parse(fileReader.result)
 //     console.log(parsedJSON)
-//     // your code to consume the json
+//     fetch('./sendgrid.json')
+//       .then((response) => {
+//         return response.json()
+//       })
+//       .then((data) => console.log(data))
 //   }
 //   fileReader.readAsText(this.files[0])
 // })
 
-const data = require('./sendgrid.json')
-console.log(data)
+fetch('./sendgrid.json')
+  .then((response) => {
+    return response.json()
+  })
+  .then((data) => console.log(data))
