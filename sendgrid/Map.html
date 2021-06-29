@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <title>Email Blast Campaign</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="content-type" content="text/javascript; charset=UTF-8" />
+    <link rel="stylesheet" href="StatsStyle.css" />
+    <script src="map.js"></script>
+
+    <script
+      src="http://maps.google.com/maps/api/js?sensor=false"
+      type="text/javascript"
+    ></script>
+  </head>
+
+  <body>
+    <header>
+      <!------------------------------------Navigation Bar Start--------------------------------------------------->
+
+      <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      />
+
+      <div class="topnav" id="myTopnav">
+        <a href="Stats.html">Email Stats</a>
+        <a href="#news">Close</a>
+        <a href="#contact">Podio</a>
+        <a href="Map.html" class="active">Map</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+
+      <!------------------------------------Navigation Bar End----------------------------------------------------->
+    </header>
+
+    <h2>AEM Active Properties</h2>
+    <!--The div element for the map -->
+    <div id="map"></div>
+
+    <script type="text/javascript">
+      var locations = [
+        ['Bondi Beach', -33.890542, 151.274856, 4],
+        ['Coogee Beach', -33.923036, 151.259052, 5],
+        ['Cronulla Beach', -34.028249, 151.157507, 3],
+        ['Manly Beach', -33.80010128657071, 151.28747820854187, 2],
+        ['3377 S Price Rd', 33.25700593762865, -111.8844809188307],
+      ]
+
+      var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 10,
+        center: new google.maps.LatLng(-33.92, 151.25),
+        mapTypeId: google.maps.MapTypeId.ROADMAP,
+      })
+
+      var infowindow = new google.maps.InfoWindow()
+
+      var marker, i
+
+      for (i = 0; i < locations.length; i++) {
+        marker = new google.maps.Marker({
+          position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+          map: map,
+        })
+
+        google.maps.event.addListener(
+          marker,
+          'click',
+          (function (marker, i) {
+            return function () {
+              infowindow.setContent(locations[i][0])
+              infowindow.open(map, marker)
+            }
+          })(marker, i)
+        )
+      }
+
+      // locations = JSON.stringify(locations);
+      // console.log(locations);
+
+      // var address = {
+      //   "Address":{
+      //     street:'',
+      //     city:'',
+      //     state:'',
+      //     zip:''
+      //   },
+      //   "Longitude": 0,
+      //   "Latitude": 0,
+      // }
+    </script>
+
+    <!------------------------------------------JSON------------------------------------>
+    <script>
+      fetch('points.json')
+        .then((response) => response.json())
+        .then((data) => {
+          // const address = results[0].address_components[0];
+          // address.push(1, 2, 3, 4, 6);
+          console.log(
+            data.results[0].address_components[(0, 1, 2, 4, 6)].long_name
+          )
+        })
+
+      let text = points.json
+      let obj = JSON.parse(text)
+    </script>
+  </body>
+</html>

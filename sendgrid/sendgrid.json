@@ -1,0 +1,54 @@
+[
+    {   "date":"2021-06-22",
+        "stats":
+        [
+            {   "type":"category",
+                "name":"dallas",
+                "metrics":
+                {   "blocks":144,
+                    "bounce_drops":64,
+                    "bounces":1,
+                    "clicks":35,
+                    "deferred":646,
+                    "delivered":2613,
+                    "invalid_emails":0,
+                    "opens":1022,
+                    "processed":2762,
+                    "requests":2826,
+                    "spam_report_drops":0,
+                    "spam_reports":0,
+                    "unique_clicks":21,
+                    "unique_opens":563,
+                    "unsubscribe_drops":0,
+                    "unsubscribes":3
+                }
+            }
+        ]
+    },
+    {   "date":"2021-06-23",
+        "stats":
+        [
+            {   "type":"category",
+                "name":"dallas",
+                "metrics":
+                {   "blocks":165,
+                    "bounce_drops":71,
+                    "bounces":1,
+                    "clicks":18,
+                    "deferred":78,
+                    "delivered":2861,
+                    "invalid_emails":0,
+                    "opens":568,
+                    "processed":3031,
+                    "requests":3102,
+                    "spam_report_drops":0,
+                    "spam_reports":0,
+                    "unique_clicks":15,
+                    "unique_opens":392,
+                    "unsubscribe_drops":0,
+                    "unsubscribes":4
+                }
+            }
+        ]
+    }
+]

@@ -1,0 +1,201 @@
+/* Statistics Styling Begin ------------------------------------------------------- */
+
+.container {
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    background-color: #f0d76b;
+    flex-wrap: wrap;
+
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        flex-direction: column;
+    }
+}
+
+
+.container div{
+    border: 1px #ccc solid;
+    padding: 10px
+}
+
+
+.box-1{
+    flex:1;
+}
+
+.box-2{
+    flex:1;
+}
+
+.box-3{
+    flex:1;
+}
+
+.box-4{
+    flex:1;
+}
+
+.box-5{
+    flex:1;
+}
+
+.box-6{
+    flex:1;
+}
+
+.box-7{
+    flex:1;
+}
+
+.box-8{
+    flex:1;
+}
+
+.box-9{
+    flex:1;
+}
+
+li {
+    list-style: none;
+    margin-left: 0;
+}
+
+h2 {
+    margin-left: 20px;
+    padding-bottom: 10px;
+    font-size: 24px;
+    font-style: italic;
+   font-weight: 500;
+   text-align: center;
+    border-bottom: 0.5px solid rgb(158, 154, 154);
+    ;
+
+}
+
+h3 {
+    margin-left: 20px;
+    padding-bottom: 10px;
+    font-size: 20px;
+    font-style: italic;
+   font-weight: 500;
+   text-align: center;
+    border-bottom: 0.5px solid rgb(158, 154, 154);
+
+}
+
+body {
+    background-color: #edf0f1;
+}
+
+/* Statistics Styling End ------------------------------------------------------- */
+
+/* Add a black background color to the top navigation */
+.topnav {
+    background-color: rgb(54, 51, 51);
+    overflow: hidden;
+ 
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 18px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  /* Add an active class to highlight the current page */
+  .topnav a.active {
+    background-color: #04AA6D;
+    color: white;
+  }
+  
+  /* Hide the link that should open and close the topnav on small screens */
+  .topnav .icon {
+    display: none;
+  }
+
+  /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 600px) {
+    .topnav a:not(:first-child) {display: none;}
+    .topnav a.icon {
+      float: right;
+      display: block;
+    }
+  }
+  
+  /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+  @media screen and (max-width: 600px) {
+    .topnav.responsive {position: relative;}
+    .topnav.responsive a.icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .topnav.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+  }
+
+
+  .topnav p {
+      color: white;    
+      font-weight: 600;
+      font-size: 18px;
+      display: flex;
+      flex:3;
+      -ms-flex-align: center;
+  }
+
+  button {
+    border: none;
+    background-color: inherit;
+    padding: 10px 22px;
+    font-size: 12px;
+    cursor: pointer;
+    display: flex;
+    -ms-flex-align: end;
+    margin-top: 5px;
+    float:right;
+}
+
+button {
+    color: rgb(255, 255, 255);
+}
+
+
+
+  @media screen and (max-width: 600px) {
+      .topnav p {
+          display: none;
+      }
+  }
+
+  @media screen and (max-width: 600px) {
+    .topnav button {
+        display: none;
+    }
+}
+
+  /* Set the size of the div element that contains the map */
+#map {
+    height: 800px;
+    /* The height is 400 pixels */
+    width: 100%;
+    /* The width is the width of the web page */
+  }
+  
