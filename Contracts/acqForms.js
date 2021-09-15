@@ -1,6 +1,6 @@
 // import { saveAs } from '../node_modules/file-saver/src/FileSaver';
 
-
+// var FileSaver = require('../node_modules/file-saver/src/FileSaver');
 
 // let acqContracts = [{
 //     question: "Your Full Name:",
@@ -1970,13 +1970,13 @@ acqData.leaseDetails, tenantRent, tenantTerm, additionalNotes, beds, baths, acqD
 
 
 
-var FileSaver = require('../node_modules/file-saver/src/FileSaver');
+
 var blob = new Blob(JSON.stringify(acqFormOutput), {type: "text/plain;charset=utf-8"});
 FileSaver.saveAs(blob, "AcqData.txt");
 
 // localStorage.setItem(dispoID, JSON.stringify(dispoDataOutput));    //Saves Form to Local Storage with a Unique ID to be received from other Javascript Files----------------
 
-localStorage.setItem("A-" + uniqueID, JSON.stringify(acqFormOutput));
+localStorage.setItem("A-" + uniqueID, JSON.stringify(acqFormOutput)); //Saves Form to Local Storage with a Unique ID to be received from other Javascript Files----------------
 // localStorage.setItem("D05sw9v3pb", JSON.stringify(dispoDataOutput));
 
 // console.log(dispoDataOutput);

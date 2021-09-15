@@ -1,7 +1,5 @@
 body {
-    background: linear-gradient(90deg
-    , #669bff87, #50c8c8a3);
-      }
+    background-color:#215576}
   
   
   
@@ -103,190 +101,7 @@ body {
       margin: 1%;
   }
   
-  input[type=date] {
-      display: flex; 
-      margin: 1.3% 0% 0% 2%; 
-      width: 95%; 
-      height: 30px;
-      color: rgb(182, 180, 180);
-  }
-  
-  ::placeholder {
-      color: rgb(182, 180, 180);
-  }
-  
-  .submitBox {
-      background-color: black;
-      display: flex;
-  }
-  
-  
-  
-      /*Contracts-----------------------------------------------------------------------------*/
-  
-  .question-container {
-      display: flex;
-      box-shadow: inset;
-      border: black;
-      background-color: rgb(255, 255, 255);
-      border-radius: 2em;
-      margin: 0% 7% 0% 7%;
-      justify-content: center;
-      box-shadow: 2px 2px 10px 8px rgb(196, 195, 195);
-      
-  }
-  
-  .input-container {
-      display: flex;
-      border-bottom: black;
-      border-width: thin;
-      margin-bottom: 10%;
-      flex-direction: column;
-  }
-  
-  .input-container h6 {
-      font-size: 1.5em;
-      font-weight: 600;
-  }
-  
-  .input-container h6::after {
-      content: "*";
-      color: red;
-      margin: left 3px;
-    }
-  
-    .answer-buttons {
-        display: flex;
-    }
-  
-    .answer-buttons button.btn{
-        color: black;
-        display:block;
-        border-style: solid;
-        border-width: thin;
-        border-color: #4d90fe;
-        color: #4d90fe;
-        border-radius: 5%;
-        margin: 50px 5px 50px 5px;
-        padding: 5px 50px 5px 50px;
-    }
-  
-  .question-container p {
-      float:left
-  }
-  
-  /*
-      boxHeader is used for the question itself.
-      flex-container will be the box that holds the questions and answers.
-      flex-item will be the text input forms.
-      offerButtons formats the buttons together as one.
-      radioButton is for the individual buttons.
-      blueBox is just the blue decorational box at the bottom.
-      selectButton wraps the buttons (yes, no) to border them
-  */
-  .flex-container {
-    display: flex;
-    flex-direction: column;
-    background-color: white;
-    margin: 3% 3% 3% 10%;
-    text-align: center;
-    border: 1px solid black;
-    border-radius: 20px 20px 20px 20px;
-    width: 80%;
-    box-shadow: 2px 2px 10px 8px rgb(196, 195, 195);
-  }
-  
-  .boxHeader {
-    text-align: center;
-  }
-  
-  .blueBox {
-    display: flex;
-    background-color: darkblue;
-    height: 35px;
-    margin-top: 3%;
-    border-radius: 0px 0px 20px 20px; 
-    padding-bottom: 10px; 
-    padding-top: 1px; 
-    justify-content: space-around; 
-  }
-  
-  .flex-item {
-    display: flex;
-    margin: 1.3% 0% 2% 2%;
-    width: 95%;
-    height: 30px;
-  }
-  
-  .offerButtons {
-    display: flex;
-    margin: 1.3% 2% 2% 1%;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .radioButton {
-    display: flex;
-    flex-direction: row;
-    border: 1px solid darkgray;
-    margin: 1.3% 0% 0% 2%;
-    padding: .5% 10% .5% 0%;
-    border-radius: 5px;
-    align-items: center;
-    font-size: 130%;
-  }
-  
-  .parkingButton {
-    display: flex;
-    flex-direction: row;
-    border: 1px solid darkgray;
-    margin: 1.3% 0% 0% 2%;
-    border-radius: 5px;
-    align-items: center;
-    font-size: 130%;
-  }
-  
-  label {
-    text-align: left;
-    margin-left: 1.3%;
-    color: rgb(182, 180, 180);
-  }
-  
-  
-  ::placeholder {
-    color: rgb(182, 180, 180);
-  }
-  
-  .invalid { border-color: red; }
-  
-  #error { 
-    color: red;
-    display: flex;
-    justify-content: space-around;
-  }
-  
-  div.submitBox {
-    display: flex;
-    background-color: #00000000;
-    justify-content: space-around;
-    margin-top: -15px;
-    padding: 4px;
-  }
-  
-  #submitDispoForm {
-      font-size: 30px;
-      padding: 7px 50px 7px 50px;
-      letter-spacing: 1px;
-      font-weight: 530;
-      background-size: 55px;
-      background-color: #f5f5f5
-  }
-  
-  #submitDispoForm:hover {
-      color: #1DA1F2;
-      box-shadow: 0px 0px 15px 9px #1DA1F2;
-      cursor: pointer;
-  }
+
 
   img.logo {
     margin-right: 100px
@@ -306,18 +121,66 @@ body {
     font-weight: 550;
   }
   
-  
-  .checkbuttons:hover {
-    color: red;
+  .photo {
+      opacity: 0.5;
+      position: absolute;
   }
-  
+
+.photoBackground {
+    position: relative;
+}
+
+.flexBox {
+    display: flex;
+    position: absolute;
+    top: 5%;
+    left: 41%;
+}
+
+.displayBody {
+    display: block;
+}
+
+
+.placeBox {
+    display: flex;
+    position: absolute;
+    background-color: #7d7d7d75;
+    margin-left: 2%;
+    top: 50px;
+    height: 640px;
+    width: 260px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.accountmentBoxTitle {
+    color:white;
+}
+
+.articleHeader {
+    padding-bottom: 10px;
+    border-bottom: .5px groove black;
+    text-align: center;
+    border-radius: 45px 0px 25px 25px;
+}
+
+.accountmentBox{
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.741);
+    width: 230px;
+    height: 515px;
+    overflow: auto;
+    border-radius: 18px 18px 18px 18px;
+    flex-direction: column;
+}
   
   /* Footer */
   
   div.footer {
     display: flex;
     flex-direction: row;
-    width: 55%;
+    width: 50%;
   }
   
   @media screen and (max-width: 992px) {
@@ -1214,7 +1077,7 @@ body {
         display: flex;
         align-items: center;
         justify-content: space-around;
-        position: inherit;
+        position: fixed;
         background-color: black;
         bottom: -1%;
         width: 100%;
@@ -1424,10 +1287,3 @@ body {
             color: #eb8f18;
             box-shadow: 0px 0px 15px 9px #eb8f18;
           }
-
-
-
-          #submitAcqForm:hover {
-            color: #1DA1F2;
-            box-shadow: 0px 0px 15px 9px #1DA1F2;
-        }
