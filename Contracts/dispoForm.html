@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+    <!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Dispo Form</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contracts">
+  <link rel="stylesheet" href="/Contracts/contracts.css">
+
+</head>
+
+<body>
+    <header>
+         <!------------------------------------Navigation Bar Start--------------------------------------------------->
+
+<!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="topnav" id="myTopnav">
+    <div class="subnav">
+          <button class="subnavbtn" onClick="window.location.href='/Stats.html'">Markets <i class="fa fa-caret-down"></i></button>
+        <div class="subnav-content">
+          <a href="/./Markets/Atlanta/Atlanta.html" value="ATL">Atlanta</a>
+          <a href="#">Birmingham</a>
+          <a href="#">Charlotte</a>
+          <a href="#">Columbus</a>
+          <a href="Dallas.html" value="DAL">Dallas</a>
+          <a href="#">Houston</a>
+          <a href="#">Kansas City</a>
+          <a href="#">Las Vegas</a>
+          <a href="#">Memphis</a>
+          <a href="#">Northern AZ</a>
+          <a href="#">San Antonio</a>
+          <a href="#">St. Louis</a>
+          <a href="/./Markets/Tucson/tucson.html">Tucson</a>
+ 
+        </div>
+      </div>
+  <a href="#news">Close</a>
+  <a href="#contact">Podio</a>
+  <a href="/../Map.html">Map</a>
+  <div class="contracts-container">
+    <a class="contract-dropdown">Contracts  <i class="fa fa-caret-down"></i></a>
+      <div class="contracts-content">
+        <a href="acq-contracts.html" class="contracts" class="active">Acq</a>
+        <a href="/Contracts/dispoForm.html" class="contracts">Dispo</a>
+      </div>
+    </div>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+  <h1>Trinity</h1>
+  <button onClick="window.location.reload();"><i style="font-size:29px" class="fa">&#xf021;</i></button>
+</div>
+
+
+
+         <!------------------------------------Navigation Bar End----------------------------------------------------->
+    </header>
+
+
+        <!-------------------------------------------------------------Statistics--------------------------------------------------------------------------------------->
+
+        <!------------------Campaign Begin------------------------->
+<h2>Dispo Form</h2>
+        <!--Property Address-->
+        <div class="flex-container">
+            <h3>Property Address:</h3>
+            <label class="centerLabel">Full Address: Street, City, State, Zip</label>
+            <forms><input type="text" placeholder="Enter Property Address" class="flex-item" id="propertyAddress"></forms>
+            <div class="blueBox"></div>
+        </div>
+
+        <!--Buyer-->
+        <div class="flex-container">
+            <h3>Is the Buyer a:</h3>
+            <label class="leftLabel">Select an option</label>
+            <forms class="offerButtons">
+                <label class="radioButton">
+                    <input type="radio" style="margin: 10px" name="Buyer" id="wholesaler">Wholesaler
+                </label>
+                <label class="radioButton">
+                    <input type="radio" style="margin: 10px" name="Buyer" id="agent">Agent
+                </label>
+                <label class="radioButton">
+                    <input type="radio" style="margin: 10px" name="Buyer" id="investor">Investor
+                    </label>
+            </forms>
+            <div class="blueBox"></div>
+        </div>
+
+        <!--Double Escrow-->
+        <div class="flex-container">
+            <h3>Double Escrow?:</h3>
+            <label class="centerLabel">Are we double closing?</label>
+            <forms class="offerButtons">
+                <label class="radioButton">
+                    <input type="radio" style="margin: 10px;" name="escrow" id="escrowYes">Yes
+                </label>
+                <label class="radioButton">
+                    <input type="radio" style="margin: 10px" name="escrow" id="escrowNo">No
+                <label>
+            </forms>
+            <div class="blueBox"></div>
+        </div>
+
+        <!--Title Company-->
+        <div class="flex-container">
+            <h3>Title Company/Attorney:</h3>
+            <label class="leftLabel">Type a description</label>
+            <forms><input type="text" class="flex-item" id="titleComp"></forms>
+            <div class="blueBox"></div>
+        </div>
+
+        <!--Title Officer's Name-->
+        <div class="flex-container">
+            <h3>Title Officer's Name:</h3>
+            <label class="leftLabel">Type a description</label>
+            <forms><input type="text" class="flex-item" id="titleOfficer"></forms>
+            <div class="blueBox"></div>
+        </div>
+
+        <!--Title Company's Email-->
+        <div id="emailBox" class="flex-container">
+            <h3>Title Company Email:</h3>
+            <label class="leftLabel">Type a description</label>
+            <forms><input type="text" placeholder="example@example.com" class="flex-item" id="titleEmail"></forms>
+            <div class="blueBox"></div>
+        </div>
+
+        <!--Title Company's Phone Number-->
+        <div class="flex-container">
+            <h3>Title Company's Phone Number:</h3>
+            <label class="leftLabel">Type a description</label>
+            <forms style="margin-bottom: 0%; margin-top: 1%">
+                <forms><input type="text" class="flex-item" placeholder="(123)-456-7890" id="compNum"></forms>
+            </forms>
+            <div class="blueBox"></div>
+        </div>
+
+        <!--Signer's Name-->
+        <div class="flex-container">
+            <h3>Signer's Name:</h3>
+            <label class="centerLabel">Name of the buyer signing the contract</label>
+            <forms><input type="text" class="flex-item" id="signerName"></forms>
+            <div class="blueBox"></div>
+        </div>
+
+        <!--Vesting-->
+        <div class="flex-container">
+            <h3>Vesting:</h3>
+            <label class="centerLabel">Name of the person or company who is buying the property</label>
+            <forms><input type="text" class="flex-item" id="vester"></forms>
+            <div class="blueBox"></div>
+        </div>
+
+        <!--Contract Price-->
+        <div class="flex-container">
+            <h3>Contract Price:</h3>
+            <label class="centerLabel">The price buyer is purchasing at</label>
+            <forms><input type="text" class="flex-item" id="contractPrice" value="$"></forms>
+            <div class="blueBox"></div>
+        </div>
+
+        <!--EMD-->
+        <div class="flex-container">
+            <h3>EMD:</h3>
+            <label class="centerLabel">Earnest Money Deposit Account</label>
+            <forms><input type="text" class="flex-item" id="EMD" value="$"></forms>
+            <div class="blueBox"></div>
+        </div>
+
+        <!--Closing costs-->
+        <div class="flex-container">
+            <h3>Are we paying closing costs?:</h3>
+            <label class="leftLabel">Choose an option</label>
+            <forms class="offerButtons">
+                <label class="radioButton">
+                    <input type="radio" style="margin: 10px;" name="closing" id="closeYes">Yes
+                </label>
+                <label class="radioButton">
+                    <input type="radio" style="margin: 10px" name="closing" id="closeNo"> No
+                </label>
+            </forms>
+            <div class="blueBox"></div>
+        </div>
+
+        <!--Close of Escrow-->
+        <div class="flex-container">
+            <h3>Close of Escrow:</h3>
+            <label class="leftLabel">Type a description</label>
+            <forms><input type="date" id="closeEscrow"></forms>
+            <div class="blueBox"></div>
+        </div>
+
+        <!--Closing Sooner-->
+        <div class="flex-container">
+            <h3>Possibility of closing sooner?:</h3>
+            <label class="leftLabel">Choose an option</label>
+            <forms class="offerButtons">
+                <label class="radioButton">
+                    <input type="radio" style="margin: 10px;" name="sooner" id="soonYes"> Yes
+                </label>
+                <label class="radioButton">
+                    <input type="radio" style="margin: 10px" name="sooner" id="soonNo"> No
+                </label>
+            </forms>
+            <div class="blueBox"></div>
+        </div>
+
+        <!--Contract Executed date-->
+        <div class="flex-container">
+            <h3>Contract Executed Date:</h3>
+            <label class="centerLabel">Today's Date</label>
+            <forms><input type="date" id="exeEscrow"></forms>
+            <div class="blueBox"></div>
+        </div>
+
+        <!--Buyer's Number-->
+        <div class="flex-container">
+            <h3>Buyer's Phone Number:</h3>
+            <label class="leftLabel">Type a description</label>
+            <forms style="margin-bottom: 0%; margin-top: 1%">
+                <forms><input type="text" class="flex-item" placeholder="(123)-456-7890" maxlength="16" id="buyNum"></forms>
+            </forms>
+            <div class="blueBox"></div>
+        </div>
+
+        <!--Docusign Email-->
+        <div class="flex-container">
+            <h3>Docusign Email:</h3>
+            <label class="centerLabel">Email for buyer/signer</label>
+            <forms><input type="text" id="docusign" placeholder="example@example.com" class="flex-item"></forms>
+            <div class="blueBox"></div>
+        </div>
+
+        <!--Your Name-->
+        <div class="flex-container">
+            <h3>Your Name:</h3>
+            <label class="leftLabel">Type a description</label>
+            <forms><input type="text" class="flex-item" id="userName"></forms>
+            <div class="blueBox"></div>
+        </div>
+    <script type="text/javascript" src="dispoForm-js.js"></script>
+    <script type="text/javascript" src="data.js"></script>
+    </body>
+</html>

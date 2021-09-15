@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Acquisition</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contracts">
+  <link rel="stylesheet" href="/Contracts/contracts.css">
+  <link rel="stylesheet" href="/Contracts/acq-table-css.css">
+
+</head>
+
+<body>
+    <header>
+         <!------------------------------------Navigation Bar Start--------------------------------------------------->
+
+<!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="topnav" id="myTopnav">
+    <div class="subnav">
+          <button class="subnavbtn" onClick="window.location.href='/Stats.html'">Markets <i class="fa fa-caret-down"></i></button>
+        <div class="subnav-content">
+          <a href="/./Markets/Atlanta/Atlanta.html" value="ATL">Atlanta</a>
+          <a href="#">Birmingham</a>
+          <a href="#">Charlotte</a>
+          <a href="#">Columbus</a>
+          <a href="Dallas.html" value="DAL">Dallas</a>
+          <a href="#">Houston</a>
+          <a href="#">Kansas City</a>
+          <a href="#">Las Vegas</a>
+          <a href="#">Memphis</a>
+          <a href="#">Northern AZ</a>
+          <a href="#">San Antonio</a>
+          <a href="#">St. Louis</a>
+          <a href="/./Markets/Tucson/tucson.html">Tucson</a>
+ 
+        </div>
+      </div>
+  <a href="#news">Close</a>
+  <a href="#contact">Podio</a>
+  <a href="/../Map.html">Map</a>
+  <div class="contracts-container">
+    <a class="contract-dropdown">Contracts  <i class="fa fa-caret-down"></i></a>
+      <div class="contracts-content">
+        <a href="acq-contracts.html" class="contracts" class="active">Acq</a>
+        <a href="/Contracts/2ndForm.html" class="contracts">Dispo</a>
+      </div>
+    </div>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+  <h1>Trinity</h1>
+  <button onClick="window.location.reload();"><i style="font-size:29px" class="fa">&#xf021;</i></button>
+</div>
+
+
+
+         <!------------------------------------Navigation Bar End----------------------------------------------------->
+    </header>
+
+
+        <!-------------------------------------------------------------Statistics--------------------------------------------------------------------------------------->
+
+        <!------------------Campaign Begin------------------------->
+<h2>Acquisition Properties</h2>
+
+<!-- <input type="text" id="myInput" onkeyup="myFilter()" placeholder="Search for names..">
+
+<ul id="myUL">
+  <li><a href="#">Adele</a></li>
+  <li><a href="#">Agnes</a></li>
+
+  <li><a href="#">Billy</a></li>
+  <li><a href="#">Bob</a></li>
+
+  <li><a href="#">Calvin</a></li>
+  <li><a href="#">Christina</a></li>
+  <li><a href="#">Cindy</a></li>
+</ul> -->
+
+<div class="dataTables">
+    
+<TABLE class="tableTitles" onload="onLoad">
+    <TR class="tr1">
+       <TD class="tdTitle">Full Name</TD>
+       <TD class="tdTitle">Written Offer</TD>
+       <TD class="tdTitle">Supplier</TD>
+       <TD class="tdTitle">Supplier Phone #</TD>
+       <TD class="tdTitle">Prop. Address</TD>
+       <TD class="tdTitle">ARV</TD>
+       <TD class="tdTitle">Net Price</TD>
+       <TD class="tdTitle">Sale Price Expectation</TD>
+       <TD class="tdTitle">EMD</TD>
+       <TD class="tdTitle">Option Fee</TD>
+       <TD class="tdTitle">Deal Split</TD>
+       <TD class="tdTitle">Send JV Agreement?</TD>
+       <TD class="tdTitle">Additional Cost</TD>
+       <TD class="tdTitle">Are We Paying Close Cost?</TD>
+       <TD class="tdTitle">COE Date</TD>
+       <TD class="tdTitle">IP Length</TD>
+       <TD class="tdTitle">Title Company or Attorney Name</TD>
+       <TD class="tdTitle">Title Officer Name</TD>
+       <TD class="tdTitle">Title Company Email</TD>
+       <TD class="tdTitle">Title Company Phone Number</TD>
+       <TD class="tdTitle">Type of Access</TD>
+       <TD class="tdTitle">Post Possession?</TD>
+       <TD class="tdTitle">Lease Details</TD>
+       <TD class="tdTitle">Current Rent, If Tenant Occupied</TD>
+       <TD class="tdTitle">Least Term, If Tenant Occupied</TD>
+       <TD class="tdTitle">Additional Notes of Supplier/Agent</TD>
+       <TD class="tdTitle">Bedrooms</TD>
+       <TD class="tdTitle">Baths</TD>
+       <TD class="tdTitle">Parking</TD>
+       <TD class="tdTitle">Pool</TD>
+       <TD class="tdTitle">Living Area (Sqft)</TD>
+       <TD class="tdTitle">Lot Size (Sqft or Acres)</TD>
+       <TD class="tdTitle">Year Built</TD>
+       <TD class="tdTitle">Link to Pictures</TD>
+    </TR>
+
+    <div class="row-2">
+    <TR class="tr2">
+        <TD class="tableDatas" >Full Name</TD>
+        <TD class="tableDatas">Written Offer</TD>
+        <TD class="tableDatas">Supplier</TD>
+        <TD class="tableDatas">Supplier Phone #</TD>
+        <TD class="tableDatas">3377 S. Price Rd. Chandler, AZ 85204</TD>
+        <TD class="tableDatas">ARV</TD>
+        <TD class="tableDatas">Net Price</TD>
+        <TD class="tableDatas">Sale Price Expectation</TD>
+        <TD class="tableDatas">EMD</TD>
+        <TD class="tableDatas">Option Fee</TD>
+        <TD class="tableDatas">Deal Split</TD>
+        <TD class="tableDatas">Send JV Agreement?</TD>
+        <TD class="tableDatas">Additional Cost</TD>
+        <TD class="tableDatas">Are We Paying Close Cost?</TD>
+        <TD class="tableDatas">COE Date</TD>
+        <TD class="tableDatas">IP Length</TD>
+        <TD class="tableDatas">Title Company/Attorney Name</TD>
+        <TD class="tableDatas">Title Officer Name</TD>
+        <TD class="tableDatas">jacob.fullerton@keyglee.com</TD>
+        <TD class="tableDatas">Title Company Phone Number</TD>
+        <TD class="tableDatas">Type of Access</TD>
+        <TD class="tableDatas">Post Possession?</TD>
+        <TD class="tableDatas">Lease Details</TD>
+        <TD class="tableDatas">Current Rent, If Tenant Occupied</TD>
+        <TD class="tableDatas">Least Term, If Tenant Occupied</TD>
+        <TD class="tableDatas">Additional Notes of Supplier/Agent</TD>
+        <TD class="tableDatas">Bedrooms</TD>
+        <TD class="tableDatas">Baths</TD>
+        <TD class="tableDatas">Parking</TD>
+        <TD class="tableDatas">Pool</TD>
+        <TD class="tableDatas">Living Area (Sqft)</TD>
+        <TD class="tableDatas">Lot Size (Sqft or Acres)</TD>
+        <TD class="tableDatas">Year Built</TD>
+        <TD class="tableDatas">Link to Pictures</TD>
+     </TR>
+    </div>
+    </div>
+ </TABLE>
+
+</div>
+
+<!-------------------------------------------------------------------Scripts------------------------------------------------>
+
+
+<script>
+
+// function myFilter() {
+//   // Declare variables
+//   var input, filter, ul, li, a, i, txtValue;
+//   input = document.getElementById('myInput');
+//   filter = input.value.toUpperCase();
+//   ul = document.getElementById("myUL");
+//   li = ul.getElementsByTagName('li');
+
+//   // Loop through all list items, and hide those who don't match the search query
+//   for (i = 0; i < li.length; i++) {
+//     a = li[i].getElementsByTagName("a")[0];
+//     txtValue = a.textContent || a.innerText;
+//     if (txtValue.toUpperCase().indexOf(filter) > -1) {
+//       li[i].style.display = "";
+//     } else {
+//       li[i].style.display = "none";
+//     }
+//   }
+// }
+
+
+/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+
+</script>
+<script src="/Contracts/Contracts-js.js"></script>
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Tucson Stats</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Email template">
+  <link rel="stylesheet" href="Tucson.css">
+  <script src="tucsonstats.js"></script>
+</head>
+
+<body>
+    <header>
+         <!------------------------------------Navigation Bar Start--------------------------------------------------->
+
+<!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="topnav" id="myTopnav">
+    <div class="subnav">
+        <button class="subnavbtn" onClick="window.location.href='/Stats.html'">Markets <i class="fa fa-caret-down"></i></button>
+        <div class="subnav-content">
+          <a href="/Markets/Atlanta/Atlanta.html">Atlanta</a>
+          <a href="#">Birmingham</a>
+          <a href="#">Charlotte</a>
+          <a href="#">Columbus</a>
+          <a href="/./Markets/Dallas/Dallas.html">Dallas</a>
+          <a href="#">Houston</a>
+          <a href="#">Kansas City</a>
+          <a href="#">Las Vegas</a>
+          <a href="#">Memphis</a>
+          <a href="#">Northern AZ</a>
+          <a href="#">San Antonio</a>
+          <a href="#">St. Louis</a>
+          <a href="tucson.html" class="active">Tucson</a>
+ 
+        </div>
+      </div>
+  <a href="#news">Close</a>
+  <a href="#contact">Podio</a>
+  <a href="/../Map.html">Map</a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+  <h1>Trinity</h1>
+  <button onClick="window.location.reload();"><i style="font-size:29px" class="fa">&#xf021;</i></button>
+</div>
+
+
+         <!------------------------------------Navigation Bar End----------------------------------------------------->
+    </header>
+
+
+        <!-------------------------------------------------------------Statistics--------------------------------------------------------------------------------------->
+
+        <h2>Tucson Market Statistics</h2>
+
+        <!------------------Campaign Begin------------------------->
+
+<div class=campaign>
+        <div class="campaigntitle">
+            <h4 id=tucsonTitle>Campaign Title -</h4>
+            <h5 id=date>Date</h5>
+        </div>
+        
+        <div class="container">
+            <div class=box-1>
+                <h3>Delivered</h3>
+                <p>
+                    <ul>
+                        <li id=tucsonDeliverPercent style="font-size: 23px;">10.56%</li>
+                        <br>
+                        <li id=tucsonDeliver>10,577</li>
+                    </ul>
+                </p>
+            </div>
+            <div class=box-2>
+                <h3>Unique Clicks</h3>
+                <p>
+                    <ul>
+                        <li><button type="button" id=tucsonClicksPercent class="open-modal" data-open="modal1">20.56%</button></li>
+                        <div class="modal" id="modal1">
+                            <div class="modal-dialog">
+                                <button class="close-modal" aria-label="close modal" data-close>✕</button>
+                              <header class="modal-header">
+                                Emails
+                              </header>
+                              <section class="modal-content">test@email.com</section>
+                          
+                            </div>
+                          </div>
+                        <br><br>
+                        <li id=tucsonClicks>20,577</li>
+                    </ul>
+                </p>
+            </div>
+            <div class=box-3>
+                <h3>Opened</h3>
+                <p>
+                    <ul>
+                        <li id=tucsonOpenPercent>30.56%</li>
+                        <br>
+                        <li id=tucsonOpen>30,577</li>
+                    </ul>
+                </p>
+            </div>
+            <div class=box-4>
+                <h3>Unique Opens</h3>
+                <p>
+                    <ul>
+                        <li id=tucsonUniqueOpenPercent>40.56%</li>
+                        <br>
+                        <li id=tucsonUniqueOpen>40,577</li>
+                    </ul>
+                </p>
+            </div>
+
+         </div>
+
+             <hr class="solid">
+</div>
+
+<!--------------------------------------------------------------Statistics end----------------------------------------------------->
+
+
+
+<!-------------------------------------------------------------------Scripts------------------------------------------------>
+
+<script>
+/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+
+</script>
+
+</body>
+</html>
