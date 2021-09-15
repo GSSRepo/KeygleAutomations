@@ -1,3 +1,5 @@
+// import { saveAs } from '../node_modules/file-saver/src/FileSaver';
+
 
 
 // let acqContracts = [{
@@ -1220,9 +1222,9 @@ function tenantTermOutput(e) {
 const additionalSupplierAgentNotes = document.getElementById("additionalSupplierAgentNotes");
 
 additionalSupplierAgentNotes.addEventListener('keydown', additionalSupplierAgentNotesOutput) 
-additionalSupplierAgentNotes.addEventListener('blur', onblurTenantTerm);
+additionalSupplierAgentNotes.addEventListener('blur', onblurAddNotes);
 
-function onblurTenantTerm() {
+function onblurAddNotes() {
     if (additionalSupplierAgentNotes.value.length > "") {
         additionalSupplierAgentNotes.style.backgroundColor = "Aquamarine";
     }
@@ -1490,7 +1492,7 @@ function linkToPicturesOutput(e) {
 
 const market = document.getElementById("market");
 
-market.addEventListener('keydown', bathNumberOutput) 
+market.addEventListener('keydown', marketOutput) 
 market.addEventListener('blur', onblurMarket);
 
 function onblurMarket() {
@@ -1499,7 +1501,7 @@ function onblurMarket() {
     }
 }; 
 
-function bathNumberOutput(e) {
+function marketOutput(e) {
     if (e.key === 'Enter') {
         market.style.backgroundColor = "Aquamarine";
     console.log(market.value)
@@ -1936,6 +1938,7 @@ console.log(propPhoto)
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
+
 var acqID = Math.random().toString(36).substr(2, 5);
 var utc = new Date().toJSON().slice(0,10).replace(/-/g,'');
 var uniqueID = acqID + utc;
@@ -1967,6 +1970,9 @@ acqData.leaseDetails, tenantRent, tenantTerm, additionalNotes, beds, baths, acqD
 
 
 
+var FileSaver = require('../node_modules/file-saver/src/FileSaver');
+var blob = new Blob(JSON.stringify(acqFormOutput), {type: "text/plain;charset=utf-8"});
+FileSaver.saveAs(blob, "AcqData.txt");
 
 // localStorage.setItem(dispoID, JSON.stringify(dispoDataOutput));    //Saves Form to Local Storage with a Unique ID to be received from other Javascript Files----------------
 

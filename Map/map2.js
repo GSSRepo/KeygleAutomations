@@ -476,7 +476,7 @@ var height = 250;
           console.log(response.data.results[0].formatted_address)
 
                //Content for info window of markers
-        const contentString = "<img src='" + dataRows[36] + "'height='150px' width='230px'>" + "<br>" + "<h4 style='font-style: italic;'>" + dataRows[6] + "</h4> <p>Wholesale Price: " + dataRows[8] + "<br><br>" + "ARV: " + dataRows[7] + "<br><br></p>" + "<a href=" + dataRows[34] + "class='listTitle' style='font-weight: 600; font-size: 13px; font-style: italic;' id='propPhotos'>Property Photos</a>" 
+        const contentString = "<img src='" + dataRows[36] + "'height='170px' width='270px'>" + "<br>" + "<h4 style='font-style: italic;'>" + dataRows[6] + "</h4> <p>Wholesale Price: " + dataRows[8] + "<br><br>" + "ARV: " + dataRows[7] + "<br><br></p>" + "<a href=" + dataRows[34] + "class='listTitle' style='font-weight: 600; font-size: 13px; font-style: italic;' id='propPhotos'>Property Photos</a>" 
 
                 // Create a marker for each location.
       const markers = locator.locations.map(function(location, markerLocations) {

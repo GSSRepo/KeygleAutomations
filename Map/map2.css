@@ -1643,3 +1643,7 @@ div.dropdown div.dropdown-content {
   border-bottom: .5px solid rgba(194, 192, 192, 0.734);
   cursor: text;
 }
+
+.gm-style-iw-d {
+  padding: 5px;
+}
