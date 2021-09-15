@@ -146,7 +146,7 @@ body {
     display: flex;
     position: absolute;
     background-color: #7d7d7d75;
-    margin-left: 2%;
+    margin-left: 4%;
     top: 50px;
     height: 640px;
     width: 260px;
@@ -173,6 +173,7 @@ body {
     overflow: auto;
     border-radius: 18px 18px 18px 18px;
     flex-direction: column;
+    margin-bottom: 20px;
 }
   
   /* Footer */
