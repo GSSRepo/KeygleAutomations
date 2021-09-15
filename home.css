@@ -149,9 +149,10 @@ body {
     margin-left: 4%;
     top: 50px;
     height: 640px;
-    width: 400px;
+    width: 380px;
     flex-direction: column;
     align-items: center;
+    border-radius: 17px 17px 17px 17px;
 }
 
 .accountmentBoxTitle {
