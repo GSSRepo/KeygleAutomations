@@ -1,0 +1,477 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>AEM Properties Map</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="content-type" content="text/javascript; charset=UTF-8" /> 
+  <link rel="stylesheet" href="map.css">
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+  <script src="https://www.gstatic.com/external_hosted/handlebars/v4.7.6/handlebars.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+
+
+</head>
+
+<body>
+    <header>
+         <!------------------------------------Navigation Bar Start--------------------------------------------------->
+
+<!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<ul class="navigation">
+  <!--the dropdown menu with all the available markets-->
+  <div class="dropdown">
+      <li class="dropbtn"><a>Markets <i class="fa fa-caret-down"></i></a></li>
+      <div class="dropdown-content">
+          <a id="atlanta" href="#">Atlanta</a>
+          <a id="birmingham" href="#">Birmingham</a>
+          <a id="charlotte" href="#">Charlotte</a>
+          <a id="columbus" href="#">Columbus</a>
+          <a id="dallas" href="#">Dallas</a>
+          <a id="houston" href="#">Houston</a>
+          <a id="kansasCity" href="#">Kansas City</a>
+          <a id="lasVegas" href="#">Las Vegas</a>
+          <a id="memphis" href="#">Memphis</a>
+          <a id="northernAZ" href="#">Northern AZ</a>
+          <a id="sanAntonio" href="#">San Antonio</a>
+          <a id="stLouis" href="#">St. Louis</a>
+          <a id="tucson" href="#">Tucson</a>
+      </div>
+  </div>
+  <li class="navItem"><a>Close</a></li>
+  <li class="navItem"><a>Podio</a></li>
+  <li class="navItem"><a>Map</a></li>
+  <div class="dropdown">
+      <li class="dropbtn"><a>Forms <i class="fa fa-caret-down"></i></a></li>
+      <div class="dropdown-content">
+          <a id="atlanta" href="#">Acquisition</a>
+          <a id="birmingham" href="#">Disposition</a>
+      </div>
+  </div>
+  <li style="width: 100%; text-align: right; margin-right: 12%;"><h1><i style="color: white;">Trinity</i></h1></li>
+  <!--directs to the login html page, no escape from login yet-->
+  <li style="width: 100%; text-align: right; margin-right: 3%;"><a href="login.html" class="login">Log In</a></li>
+</ul>
+
+         <!------------------------------------Navigation Bar End----------------------------------------------------->
+    </header>
+
+    <h2>AEM Active Properties</h2>
+    <!--The div element for the map -->
+    <div id="searchWrapper" style="display: flex;">
+      <input
+          type="text"
+          name="searchBox"
+          id="pac-input"
+        class="controls"
+          placeholder="Search Address"
+      />
+    </div>
+    <div id="map">
+    </div>
+
+    <footer>
+      <img class="logo" src="/Logos/Keyglee Dispo Logo.png" alt="KeyGlee Logo" width="100" height="93">
+      <div style="display: flex; flex-direction: row; width: 50%;">
+          <a href="stats.html" class="foot">
+          <h3>Home</h3>
+          </a>
+          <a href="https://theglobalsystemsolutions.itclientportal.com/ClientPortal/LandingPage/LandingPage.aspx?fromLogin=1" target="blank" class="foot">
+              <h3>IT Support</h3>
+          </a>
+          <a href="#" class="foot">
+              <h3>About Us</h3>
+          </a>
+
+          <a href="#" class="foot">
+              <h3>Contact Us</h3>
+          </a>
+          <a href="#" class="foot">
+              <h3>Terms and Conditions</h3>
+          </a>
+      </div>
+      <ul class="socialList">
+          <li><a href="https://www.instagram.com/keygleedispo/?hl=en"><i class="fa fa-instagram" aria-hidden="true"></i></a></div></li>
+          <li><a href="https://www.facebook.com/keygleedispo"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+          <li><a href="https://twitter.com/keygleedispo"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+      </ul>
+  </footer>
+    <!-- <script type="text/javascript">
+
+// Getting info from JSON
+fetch("points.json")
+.then(response => response.json())
+.then(data => {
+
+
+let address = [
+data.results[0].address_components[0].long_name, 
+data.results[0].address_components[1].long_name,
+data.results[0].address_components[2].long_name,
+data.results[0].address_components[4].long_name,
+data.results[0].address_components[6].long_name
+];
+
+
+var stringOutput = JSON.stringify(address);
+
+let conc = stringOutput[0].concat(address);
+
+removeBracket = conc.replace(/[[\]]/g,"")
+
+string = removeBracket.replace(/,/g , " ");
+
+
+// Longitute and Latitude 
+
+let coordinatesLat = 
+
+data.results[0].geometry.location.lat
+;
+
+let coordinatesLng = 
+
+data.results[0].geometry.location.lng
+;
+
+// Stringify Long and Lat
+var coordinateOutputLat = JSON.stringify(coordinatesLat);
+
+var coordinateOutputLng = JSON.stringify(coordinatesLng);
+
+//Concat
+// let coordLat = coordinateOutputLat[0].concat(coordinateOutputLat);
+
+// let coordLng = coordinateOutputLng[0].concat(coordinateOutputLng);
+
+//Convert String to Integer -------------
+
+var outputLat = Number(coordinateOutputLat);
+var outputLng = Number(coordinateOutputLng);
+
+
+
+// longremove = coordinateOutput.replace(/{"lat":/g,'');
+// cordOutput = longremove.replace(/"lng":/g,'');
+// bracketRemove = cordOutput.replace(/}/g, '');
+
+// var stringSplit = bracketRemove.split(" ");
+
+
+var locations = [[string, outputLat, outputLng,],];
+
+// var addressCoordinates = string.concat(bracketRemove);
+
+
+var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 10,
+        center: new google.maps.LatLng(33.257026656612325, -111.88452580233248),
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+      });
+  
+      var infowindow = new google.maps.InfoWindow();
+  
+      var marker, i;
+  
+      for (i = 0; i < locations.length; i++) {  
+        marker = new google.maps.Marker({
+          position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+          map: map
+        });
+  
+        google.maps.event.addListener(marker, 'click', (function(marker, i) {
+          return function() {
+            infowindow.setContent(locations[i][0]);
+            infowindow.open(map, marker);
+          }
+        })(marker, i));
+      }
+
+
+      //Javascript for search function----
+
+// This example adds a search box to a map, using the Google Place Autocomplete
+// feature. People can enter geographical searches. The search box will return a
+// pick list containing a mix of places and predicted search terms.
+// This example requires the Places library. Include the libraries=places
+// parameter when you first load the API. For example:
+// <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
+  
+  let autocomplete; 
+  function initAutocomplete() {
+    const input = document.getElementById("pac-input");
+const options = {
+  bounds: defaultBounds,
+  componentRestrictions: { country: "us" },
+  fields: ["address_components", "geometry", "icon", "name"],
+  origin: center,
+  strictBounds: false,
+  types: ["establishment"],
+};
+const autocomplete = new google.maps.places.Autocomplete(input, options);
+  // Bias the SearchBox results towards current map's viewport.
+  map.addListener("bounds_changed", () => {
+    searchBox.setBounds(map.getBounds());
+  });
+  let markers = [];
+  // Listen for the event fired when the user selects a prediction and retrieve
+  // more details for that place.
+  searchBox.addListener("places_changed", () => {
+    const places = searchBox.getPlaces();
+
+    if (places.length == 0) {
+      return;
+    }
+    // Clear out the old markers.
+    markers.forEach((marker) => {
+      marker.setMap(null);
+    });
+    markers = [];
+    // For each place, get the icon, name and location.
+    const bounds = new google.maps.LatLngBounds();
+    places.forEach((place) => {
+      if (!place.geometry || !place.geometry.location) {
+        console.log("Returned place contains no geometry");
+        return;
+      }
+      const icon = {
+        url: place.icon,
+        size: new google.maps.Size(71, 71),
+        origin: new google.maps.Point(0, 0),
+        anchor: new google.maps.Point(17, 34),
+        scaledSize: new google.maps.Size(25, 25),
+      };
+      // Create a marker for each place.
+      markers.push(
+        new google.maps.Marker({
+          map,
+          icon,
+          title: place.name,
+          position: place.geometry.location,
+        })
+      );
+
+      if (place.geometry.viewport) {
+        // Only geocodes have viewport.
+        bounds.union(place.geometry.viewport);
+      } else {
+        bounds.extend(place.geometry.location);
+      }
+    });
+    map.fitBounds(bounds);
+  });
+}
+console.log(marker.position);
+}
+
+
+); -->
+
+<!-- //-------------------------------------------------------------------
+// //Javascript for search function----
+
+// // This example adds a search box to a map, using the Google Place Autocomplete
+// // feature. People can enter geographical searches. The search box will return a
+// // pick list containing a mix of places and predicted search terms.
+// // This example requires the Places library. Include the libraries=places
+// // parameter when you first load the API. For example: -->
+<!-- // // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places"> -->
+<!-- //   function initAutocomplete() {
+//   const map = new google.maps.Map(document.getElementById("map"), {
+//     center: { lat: -33.8688, lng: 151.2195 },
+//     zoom: 13,
+//     mapTypeId: "roadmap",
+//   });
+//   // Create the search box and link it to the UI element.
+//   const input = document.getElementById("pac-input");
+//   const searchBox = new google.maps.places.SearchBox(input);
+//   map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+//   // Bias the SearchBox results towards current map's viewport.
+//   map.addListener("bounds_changed", () => {
+//     searchBox.setBounds(map.getBounds());
+//   });
+//   let markers = [];
+//   // Listen for the event fired when the user selects a prediction and retrieve
+//   // more details for that place.
+//   searchBox.addListener("places_changed", () => {
+//     const places = searchBox.getPlaces();
+
+//     if (places.length == 0) {
+//       return;
+//     }
+//     // Clear out the old markers.
+//     markers.forEach((marker) => {
+//       marker.setMap(null);
+//     });
+//     markers = [];
+//     // For each place, get the icon, name and location.
+//     const bounds = new google.maps.LatLngBounds();
+//     places.forEach((place) => {
+//       if (!place.geometry || !place.geometry.location) {
+//         console.log("Returned place contains no geometry");
+//         return;
+//       }
+//       const icon = {
+//         url: place.icon,
+//         size: new google.maps.Size(71, 71),
+//         origin: new google.maps.Point(0, 0),
+//         anchor: new google.maps.Point(17, 34),
+//         scaledSize: new google.maps.Size(25, 25),
+//       };
+//       // Create a marker for each place.
+//       markers.push(
+//         new google.maps.Marker({
+//           map,
+//           icon,
+//           title: place.name,
+//           position: place.geometry.location,
+//         })
+//       );
+
+//       if (place.geometry.viewport) {
+//         // Only geocodes have viewport.
+//         bounds.union(place.geometry.viewport);
+//       } else {
+//         bounds.extend(place.geometry.location);
+//       }
+//     });
+//     map.fitBounds(bounds);
+//   });
+// }
+
+
+
+
+//-------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+      // var locations = [
+      //   ['Bondi Beach', -33.890542, 151.274856, 4],
+      //   ['Coogee Beach', -33.923036, 151.259052, 5],
+      //   ['Cronulla Beach', -34.028249, 151.157507, 3],
+      //   ['Manly Beach', -33.80010128657071, 151.28747820854187, 2],
+      //   ["205205 York Street Burlington New Jersey 08016", 33.25700593762865, -111.8844809188307]
+      // ];
+  
+      // var map = new google.maps.Map(document.getElementById('map'), {
+      //   zoom: 10,
+      //   center: new google.maps.LatLng(-33.92, 151.25),
+      //   mapTypeId: google.maps.MapTypeId.ROADMAP
+      // });
+  
+      // var infowindow = new google.maps.InfoWindow();
+  
+      // var marker, i;
+  
+      // for (i = 0; i < locations.length; i++) {  
+      //   marker = new google.maps.Marker({
+      //     position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+      //     map: map
+      //   });
+  
+      //   google.maps.event.addListener(marker, 'click', (function(marker, i) {
+      //     return function() {
+      //       infowindow.setContent(locations[i][0]);
+      //       infowindow.open(map, marker);
+      //     }
+      //   })(marker, i));
+      // } -->
+<!-- 
+    </script> -->
+ <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+<!------------------------------------------JSON------------------------------------>
+<!-- <script>
+fetch("points.json")
+.then(response => response.json())
+.then(data => {
+// const address = results[0].address_components[0];
+// address.push(1, 2, 3, 4, 6);
+// console.log(data.results[0].formatted_address)
+
+let address = [
+
+// data.results[0].address_components[0][1][2][4][6].long_name;
+
+data.results[0].address_components[0].long_name, 
+data.results[0].address_components[1].long_name,
+data.results[0].address_components[2].long_name,
+data.results[0].address_components[4].long_name,
+data.results[0].address_components[6].long_name];
+
+
+var stringOutput = JSON.stringify(address);
+
+let conc = address[0].concat(address);
+
+string = conc.replace(/,/g , " ");
+
+
+// Longitute and Latitude
+
+let coordinatesLat = 
+
+data.results[0].geometry.location.lat
+;
+
+let coordinatesLng = 
+
+data.results[0].geometry.location.lng
+;
+
+// Stringify Long and Lat
+var coordinateOutputLat = JSON.stringify(coordinatesLat);
+
+var coordinateOutputLng = JSON.stringify(coordinatesLng);
+
+//Concat
+let coordLat = coordinateOutputLat[0].concat(coordinateOutputLat);
+
+let coordLng = coordinateOutputLng[0].concat(coordinateOutputLng);
+
+
+
+// longremove = coordinateOutput.replace(/{"lat":/g,'');
+// cordOutput = longremove.replace(/"lng":/g,'');
+// bracketRemove = cordOutput.replace(/}/g, '');
+
+// var stringSplit = bracketRemove.split(" ");
+
+
+var locations = [string, coordinateOutputLng, coordinateOutputLat];
+// var addressCoordinates = string.concat(bracketRemove);
+
+
+
+
+ console.log(locations);
+}
+
+
+);
+
+
+
+
+</script> -->
+
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+<script src="map.js"></script>
+<script
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZO4-fjim18Q-HauZlwCvMCpZ_HUPjWA8&callback=initAutocomplete&libraries=places,geometry&v=weekly&region=US"
+async></script>
+
+
+</body>

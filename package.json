@@ -1,14 +1,26 @@
 {
   "name": "sendgrid-html",
   "version": "1.0.0",
-  "description": "",
+  "description": "ReactJS",
   "main": "google.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npm run build",
+    "build": "webpack -d && cp src/index.html dist/index.html && webpack-dev-server --content-base src/",
+    "build:prod": "webpack -d && cp src/index.html dist/index.html"
   },
   "author": "Gio",
   "license": "ISC",
   "dependencies": {
-    "moment": "^2.29.1"
+    "axios": "^0.21.4",
+    "handlebars": "^4.7.7",
+    "moment": "^2.29.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "keywords": [
+    "reactjs"
+  ],
+  "devDependencies": {
+    "webpack": "^5.47.1"
   }
 }
