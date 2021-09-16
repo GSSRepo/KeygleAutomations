@@ -2,6 +2,123 @@ body {
     background-color:#215576}
   
   
+    /*footer contents*/
+    .foot {
+      color: white;
+      text-decoration: none;
+      padding-right: 4%;
+      white-space: nowrap;
+    }
+    
+    /*footer social media icon list*/
+    .socialList {
+      display: flex; 
+      flex-direction: row;     
+      height: 100%;
+    }
+  
+
+
+/* Slidshow */
+
+#slideshow { 
+  position: fixed;
+  width: 100%;
+  opacity: .5;
+  height: 383px;
+  padding: 0px;
+  box-shadow: 0 0 20px rgb(0 0 0 / 40%);
+}
+
+#slideshow > div { 
+  position: absolute; 
+  top: 10px; 
+  left: 10px; 
+  right: 1px; 
+  margin-right: 60px;
+  bottom: 10px; 
+  margin-bottom: 50px;
+}
+
+
+  
+    .footerList:hover {
+      color: #2ca1db;
+      border-bottom: 0.5px solid #2ca1db;
+    }
+    
+    /*not using this*/
+    /*light background for buttons*/
+    .backLight {
+      border: 1px solid rgba(0, 0, 0, 0);
+      border-radius: 50%;
+      width: 100px;
+      height: 100px;
+      background: radial-gradient(rgb(100, 100, 100) 40%, rgb(27, 27, 27), black);
+      transition: all 1s;
+      /*
+      width:130px;
+      height:130px;
+      background: radial-gradient(rgb(100, 100, 100)25%, rgb(10, 10, 10), black);
+      */
+    }
+    
+    /*footer list individuals*/
+    .socialList li {
+      list-style: none;
+      margin: 6px;
+    }
+    
+    /*footer social media icons*/
+    .socialList li a {
+      position: relative;
+      width: 39px;
+      height: 40px;
+      display: block;
+      text-align: center;
+      border-radius: 50%;
+      padding: 0px;
+      box-sizing: border-box;
+      text-decoration: none;
+      background: linear-gradient( 
+  0deg
+   , #ddd, #fff);
+      transition: .75s;
+    }
+    
+    .socialList li a:hover {
+      
+      text-decoration:none;
+    }
+    
+    /*social media icons themselves*/
+    .socialList li a .fa {
+      width: 100%;
+      height: 100%;
+      display: contents;
+      background: linear-gradient( 
+  0deg
+   , #fff, #ddd);
+      border-radius: 50%;
+      line-height: calc(60px - 18px);
+      font-size: 22px;
+      color: #262626;
+      transition: .5s;
+    }
+
+
+    
+    
+    /*helps format Trinity title*/
+    h1 {
+      display: inline-block;
+    }
+    
+
+    
+    
+
+    
   
   /* Hides second top title */
   .topTitle2 {
@@ -17,6 +134,37 @@ body {
   li {
     list-style: none;
   }
+
+  #box3.placeBox {
+    top: 100px;
+    height: 780px;
+    width: 450px;
+  }
+
+        /*css for the footer*/
+        footer {
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+          position: fixed;
+          background-color: black;
+          bottom: 0%;
+          width: 100%;
+          margin-top: 15px;
+        }
+
+      /* Footer Headers/Hover */
+    
+      .footerList {
+        margin-left: 30px;
+        font-size: 20px;
+        padding-bottom: 0px;
+        font-style: italic;
+        font-weight: 500;
+        text-align: center;
+        border-bottom: 0.5px solid rgb(158, 154, 154);
+        letter-spacing: 0.04em;
+      }
   
   
   /*The entire box that holds the question*/
@@ -100,11 +248,36 @@ body {
       font-size: 200%;
       margin: 1%;
   }
-  
+
+  .articles {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 500px;
+    flex-direction: row;
+  }
+
+.articleBox {
+  display: flex;
+}
 
 
-  img.logo {
+  .topLogo {
+    margin-top: 20px;
     margin-right: 100px;
+    position: fixed;
+    margin-left: 45%;
+    opacity: 1;
+  }
+
+  .logo {
+    margin-right: -2px;
+    position: initial;
+  }
+
+  #toplogo {
+    width: 230px;
+    height: 185px;
   }
   
   .buttonbox {
@@ -123,7 +296,7 @@ body {
   
   .photo {
       opacity: 0.5;
-      position: absolute;
+      position: fixed;
   }
 
 .photoBackground {
@@ -137,22 +310,28 @@ body {
     left: 41%;
 }
 
+.instaBox {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20%;
+}
+
 .displayBody {
     display: block;
 }
 
 
 .placeBox {
-    display: flex;
-    position: absolute;
-    background-color: #7d7d7d75;
-    margin-left: 4%;
-    top: 50px;
-    height: 640px;
-    width: 380px;
-    flex-direction: column;
-    align-items: center;
-    border-radius: 17px 17px 17px 17px;
+  display: flex;
+  position: absolute;
+  background-color: #7d7d7d75;
+  margin-left: 5px;
+  margin-top: 50px;
+  height: 640px;
+  width: 450px;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 17px 17px 17px 17px;
 }
 
 .accountmentBoxTitle {
@@ -190,7 +369,7 @@ body {
     div.footer {
       display: flex;
       flex-direction: column;
-      margin-right: 15%;
+      margin-right: 0%;
     }
   
     div.logo {
@@ -198,6 +377,7 @@ body {
       height: 50%;
       width: 35%;
     }
+    
 
 
   
@@ -285,7 +465,6 @@ body {
   {
   text-decoration: none;
   color: #232323;
-  margin-right: 37%;
   transition: color 0.3s ease;
   }
   
@@ -485,10 +664,23 @@ body {
       padding-left: 15px;
       padding-right: 15px;
     }
+
+    .placeBox {
+      display: flex;
+      position: absolute;
+      background-color: #7d7d7d75;
+      margin-left: 0px;
+      height: 640px;
+      width: 380px;
+      flex-direction: column;
+      align-items: center;
+      border-radius: 17px 17px 17px 17px;
+      top: 23px;
+  }
   
     .footerList {
       margin-left: 35px;
-      font-size: 14px;
+      font-size: 13px;
       padding-bottom: 0px;
       font-style: italic;
       font-weight: 500;
@@ -503,18 +695,38 @@ body {
       width: 25%;
       max-width: 100%;
       height: auto;
+      display: none;
   }
   
   .socialList li {
     list-style: none;
-    margin: 1px;
+    margin: 7px;
     margin-bottom: 0px;
   }
   
   ul.socialList {
     display: flex;
     flex-direction: column;
-    margin-right: 20%;
+    margin-right: -65%;
+    position: fixed;
+    top: 240px;
+  }
+
+  div.footer {
+    display: none;
+    flex-direction: column;
+    margin-right: 0%;
+}
+
+  .footerList {
+    margin-left: 55px;
+    font-size: 13px;
+    padding-bottom: 0px;
+    font-style: italic;
+    font-weight: 500;
+    text-align: center;
+    border-bottom: 0.5px solid rgb(158, 154, 154);
+    letter-spacing: 0.04em;
   }
   
   
@@ -750,6 +962,43 @@ body {
   
   /*This changes the nav bar to burger menu when it shrinks*/
   @media only screen and (max-width: 768px) {
+    body {
+      overflow-y: auto;
+      overflow-x: auto;
+    }
+
+    .instaBox {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 20%;
+      flex-direction: column;
+      align-items: center;
+  }
+
+    img.logo {
+      margin-right: 0px;
+  }
+
+    .articles {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    .articleBox {
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-start;
+      flex-direction: column;
+  }
+
+    .photoBackground {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-content: center;
+    }
+
     #market {
         display: none;
     }
@@ -757,13 +1006,30 @@ body {
     #form {
         display: none;
     }
+
+    #box2.placeBox {
+      top: 800px;
+      margin-left: 30px;
+    }
+
+  #articleBox2 {
+    margin-left: 20px;
+  }
+
+    #box3.placeBox {
+      top: 1500px;
+    }
+
+    .flexBox {
+      display: none;
+  }
   
   /* Hamburger Menu Start */
   #menuToggle
   {
     display: block;
     position: relative;
-    top: 50px;
+    top: 12px;
     left: 20px;
     
     z-index: 1;
@@ -777,7 +1043,6 @@ body {
   {
     text-decoration: none;
     color: #232323;
-    margin-right: 37%;
     transition: color 0.3s ease;
   }
   
@@ -905,6 +1170,7 @@ body {
     justify-content: space-evenly;
     position: initial;
     width: 100%;
+    padding: 170px 10px 50px 10px;
   }
   
   
@@ -971,122 +1237,12 @@ body {
   }
   
       
-      /*footer contents*/
-      .foot {
-        color: white;
-        text-decoration: none;
-        padding-right: 4%;
-        white-space: nowrap;
-      }
-      
-      /*footer social media icon list*/
-      .socialList {
-        display: flex; 
-        flex-direction: row;     
-        height: 100%;
-      }
-    
-      /* Footer Headers/Hover */
-    
-      .footerList {
-        margin-left: 30px;
-        font-size: 20px;
-        padding-bottom: 0px;
-        font-style: italic;
-        font-weight: 500;
-        text-align: center;
-        border-bottom: 0.5px solid rgb(158, 154, 154);
-        letter-spacing: 0.04em;
-      }
-    
-      .footerList:hover {
-        color: #2ca1db;
-        border-bottom: 0.5px solid #2ca1db;
-      }
-      
-      /*not using this*/
-      /*light background for buttons*/
-      .backLight {
-        border: 1px solid rgba(0, 0, 0, 0);
-        border-radius: 50%;
-        width: 100px;
-        height: 100px;
-        background: radial-gradient(rgb(100, 100, 100) 40%, rgb(27, 27, 27), black);
-        transition: all 1s;
-        /*
-        width:130px;
-        height:130px;
-        background: radial-gradient(rgb(100, 100, 100)25%, rgb(10, 10, 10), black);
-        */
-      }
-      
-      /*footer list individuals*/
-      .socialList li {
-        list-style: none;
-        margin: 6px;
-      }
-      
-      /*footer social media icons*/
-      .socialList li a {
-        position: relative;
-        width: 39px;
-        height: 40px;
-        display: block;
-        text-align: center;
-        border-radius: 50%;
-        padding: 0px;
-        box-sizing: border-box;
-        text-decoration: none;
-        background: linear-gradient( 
-    0deg
-     , #ddd, #fff);
-        transition: .75s;
-      }
-      
-      .socialList li a:hover {
-        
-        text-decoration:none;
-      }
-      
-      /*social media icons themselves*/
-      .socialList li a .fa {
-        width: 100%;
-        height: 100%;
-        display: contents;
-        background: linear-gradient( 
-    0deg
-     , #fff, #ddd);
-        border-radius: 50%;
-        line-height: calc(60px - 18px);
-        font-size: 22px;
-        color: #262626;
-        transition: .5s;
-      }
-  
   
       
-      
-      /*helps format Trinity title*/
-      h1 {
-        display: inline-block;
-      }
-      
-  
-      
-      
-      /*css for the footer*/
-      footer {
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        position: fixed;
-        background-color: black;
-        bottom: -1%;
-        width: 100%;
-        margin-top: 15px;
-      }
-      
-      
+
+.instaPost {
+  position: absolute;
+}
       
   /* TopNav */
     
