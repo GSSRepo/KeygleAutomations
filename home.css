@@ -1,5 +1,7 @@
 body {
-    background-color:#215576}
+    background-color:#215576;
+    margin: 0px;
+  }
   
   
     /*footer contents*/
@@ -22,11 +24,11 @@ body {
 /* Slidshow */
 
 #slideshow { 
-  position: fixed;
+  position: absolute;
   width: 100%;
   opacity: .5;
   height: 383px;
-  padding: 0px;
+  padding: 24px;
   box-shadow: 0 0 20px rgb(0 0 0 / 40%);
 }
 
@@ -136,7 +138,7 @@ body {
   }
 
   #box3.placeBox {
-    top: 100px;
+    top: 380px;
     height: 780px;
     width: 450px;
   }
@@ -263,11 +265,10 @@ body {
 
 
   .topLogo {
-    margin-top: 20px;
+    margin-top: 230px;
     margin-right: 100px;
-    position: fixed;
-    margin-left: 45%;
-    opacity: 1;
+    position: absolute;
+    margin-left: 43%;
   }
 
   .logo {
@@ -325,10 +326,10 @@ body {
   display: flex;
   position: absolute;
   background-color: #7d7d7d75;
-  margin-left: 5px;
+  margin-left: 30px;
   margin-top: 50px;
   height: 640px;
-  width: 450px;
+  width: 390px;
   flex-direction: column;
   align-items: center;
   border-radius: 17px 17px 17px 17px;
@@ -707,9 +708,9 @@ body {
   ul.socialList {
     display: flex;
     flex-direction: column;
-    margin-right: -65%;
+    margin-right: 96%;
     position: fixed;
-    top: 240px;
+    top: 425px;
   }
 
   div.footer {
@@ -967,6 +968,14 @@ body {
       overflow-x: auto;
     }
 
+    .topLogo {
+      display: none;
+      margin-top: 230px;
+      margin-right: 100px;
+      position: absolute;
+      margin-left: 43%;
+  }
+
     .instaBox {
       display: flex;
       justify-content: space-around;
@@ -1009,7 +1018,7 @@ body {
 
     #box2.placeBox {
       top: 800px;
-      margin-left: 30px;
+      margin-left: 0px;
     }
 
   #articleBox2 {
