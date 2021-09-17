@@ -1,25 +1,23 @@
 
-//Currently does not function
-// function previewFile() {
-//     const propPhoto = document.querySelector('input[type=file]').files[0];
-//     const output = document.getElementById('output_image');
-//     const reader = new FileReader();
+//Property photo upload for Map
+function previewFile() {
+    const propPhoto = document.querySelector('input[type=file]').files[0];
+    const output = document.getElementById('output_image');
+    const reader = new FileReader();
 
 
-//     reader.addEventListener("load", function () {
-//         // convert image file to base64 string
-//         output.src = reader.result;
+    reader.addEventListener("load", function () {
+        // convert image file to base64 string
+        output.src = reader.result;
 
-//         const imageOutput = output.src
+        const imageOutput = output.src
   
-//       }, false);
+      }, false);
     
-//       if (propPhoto) {
-//         reader.readAsDataURL(propPhoto);
-//       }
-//   }
-
-
+      if (propPhoto) {
+        reader.readAsDataURL(propPhoto);
+      }
+  }
 
 
 //Your Full Name Form----------------
@@ -66,35 +64,20 @@ supplierName.addEventListener('keydown', function supplierEvent(e) {
 //Supplier's Email ------------------
 
 const supplierEmail = document.getElementById("supplierEmail");
+let regexpr1 = new RegExp('\\S+@\\S+.com');
 
-supplierEmail.addEventListener('keydown', function supplierEmailEvent(e) {
-    e.key === 'Enter' ? supplierEmail.style.backgroundColor = "Aquamarine" : null;
-
-    if (!supplierEmail.value.includes('@')) { // not email
-        supplierEmail.classList.add('invalid');
-        error.innerHTML = 'Please enter a correct email.'
-    };
-
-    e.key === 'Backspace' ? supplierEmail.style.backgroundColor = "white" : null;
+//Field turns green when exiting out of field with text, backspace will turn the field back white
+supplierEmail.addEventListener("blur", function onblursupplierEmail() {
+    supplierEmail.value.length > "" && supplierEmail.value.includes('@') ? supplierEmail.style.backgroundColor = "Aquamarine" : supplierEmail.style.borderColor = "Red";
 });
 
-supplierEmail.onblur = function() {
-    if (!supplierEmail.value.includes('@')) { // not email
-      supplierEmail.classList.add('invalid');
-      error.innerHTML = 'Please enter a correct email.'
+supplierEmail.addEventListener("keypress", function titleCompanyEmail(e) {
+    supplierEmail.style.backgroundColor = "white";
+    if (e.key === "Enter" && supplierEmail.value > "") {
+        regexpr1.test(supplierEmail.value) ? console.log(supplierEmail.value) : supplierEmail.style.borderColor = "red";
     }
-    else {
-        supplierEmail.style.backgroundColor = "Aquamarine";
-    }
-  };
-  
-  supplierEmail.onfocus = function() {
-    if (this.classList.contains('invalid')) {
-      // remove the "error" indication, because the user wants to re-enter something
-      this.classList.remove('invalid');
-      error.innerHTML = "";
-    }
-  };
+});
+
 
 //Supplier's Phone Number -----------------------
 
@@ -184,16 +167,16 @@ searchBox.setComponentRestrictions({
 const arv = document.getElementById("arv");
 
 arv.addEventListener('blur', function onblurARV() {
-    if (arv.value.length > "") {
-        arv.style.backgroundColor = "Aquamarine";
+if (arv.value.length > "") {
+    arv.style.backgroundColor = "Aquamarine";
 
-        //ensures that the number is properly formatted before being displayed to console.
-        arv.value = arv.value.replace(regexpr2, "");
-        arv.value = currencyFormat.format(parseFloat(arv.value));
-        arv.value = "$" + arv.value;
-        console.log(arv.value);
-      
-    }
+    //ensures that the number is properly formatted before being displayed to console.
+    arv.value = arv.value.replace(regexpr2, "");
+    arv.value = currencyFormat.format(parseFloat(arv.value));
+    arv.value = "$" + arv.value;
+    console.log(arv.value);
+    
+}
 });
 
 var currencyFormat = new Intl.NumberFormat('en-US', {maximumFractionDigits: 2});
@@ -202,38 +185,38 @@ let regexpr2 = /[A-Za-z$,]+/g;
 
 arv.addEventListener("input", function arvOutput(e) {
 
-    if (arv.value === "" || arv.value === "$") {
-        arv.value = 0;
-        //to ensure that the default $0 remains
-        arv.value = currencyFormat.format(parseFloat(arv.value));
-        arv.value = "$" + arv.value;
-    }
-    let last = arv.value.slice(-1);
-    if (e.data != "." && last != ".") {
-        arv.value = arv.value.replace(regexpr2, ""); //removes all letters, $'s, and commas
-        arv.value = currencyFormat.format(parseFloat(arv.value)); //uses the Intl.NumberFormat to format the number according to US number standards to only 2 decimal places.
-        arv.value = "$" + arv.value; //simply concatenates the $ to the front of the number
-    }
+if (arv.value === "" || arv.value === "$") {
+    arv.value = 0;
+    //to ensure that the default $0 remains
+    arv.value = currencyFormat.format(parseFloat(arv.value));
+    arv.value = "$" + arv.value;
+}
+let last = arv.value.slice(-1);
+if (e.data != "." && last != ".") {
+    arv.value = arv.value.replace(regexpr2, ""); //removes all letters, $'s, and commas
+    arv.value = currencyFormat.format(parseFloat(arv.value)); //uses the Intl.NumberFormat to format the number according to US number standards to only 2 decimal places.
+    arv.value = "$" + arv.value; //simply concatenates the $ to the front of the number
+}
 });
 
 arv.addEventListener('keydown', function printARVPrice(e) {
-    if (e.key === "Enter" && arv.value > "") {
+if (e.key === "Enter" && arv.value > "") {
 
-        arv.style.backgroundColor = "Aquamarine";
+    arv.style.backgroundColor = "Aquamarine";
 
-        //ensures that the number is properly formatted before being displayed to console.
-        arv.value = arv.value.replace(regexpr2, "");
-        arv.value = currencyFormat.format(parseFloat(arv.value));
-        arv.value = "$" + arv.value;
-        console.log(arv.value);
-    }
+    //ensures that the number is properly formatted before being displayed to console.
+    arv.value = arv.value.replace(regexpr2, "");
+    arv.value = currencyFormat.format(parseFloat(arv.value));
+    arv.value = "$" + arv.value;
+    console.log(arv.value);
+}
 
-    e.key === "Backspace" ? arv.style.backgroundColor = "White" : null;
+e.key === "Backspace" ? arv.style.backgroundColor = "White" : null;
 
-    //prevents users from spamming periods
-    let period = arv.value.search(/\./);
+//prevents users from spamming periods
+let period = arv.value.search(/\./);
 
-    period != -1 && e.key === "." ? e.preventDefault() : null;
+period != -1 && e.key === "." ? e.preventDefault() : null;
 });
 
 
@@ -1203,7 +1186,7 @@ var utc = new Date().toJSON().slice(0,10).replace(/-/g,'');
 var uniqueID = acqID + utc;
 
 //All value variables to be submitted in to form
-const acqFormOutput = [uniqueID, fullNameValue, acqData.writtenOffer, acqData.supplier, supplierName, supplierEmail, supplierNumber, addressAnswer, ARV, netPrice, salePrice, EMD, optionFee,  acqData.dealSplit, acqData.jv , additionalCost, acqData.closing, COE, ipLength, titleAttorney, titleOfficer, titleOfficerEmail, titlePhoneNumber, acqData.postPosession,
+const acqFormOutput = [uniqueID, fullNameValue, acqData.writtenOffer, acqData.supplier, supplierName, supplierEmail, supplierNumber, addressAnswer, ARV, netPrice, salePrice, EMD, optionFee,  acqData.dealSplit, acqData.jv , additionalCost, acqData.closing, COE, ipLength, titleAttorney, titleOfficer, titleOfficerEmail, titlePhoneNumber, acqData.typeOfAccess, acqData.postPosession,
 acqData.leaseDetails, tenantRent, tenantTerm, additionalNotes, beds, baths, acqData.parking, acqData.pool, livingArea, lotSize, yearBuild, pictureLink, marketValue, propPhoto];
 
 

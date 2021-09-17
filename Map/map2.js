@@ -318,7 +318,7 @@ function LocatorPlus(configuration) {
         head.classList.add("name");
         head.style = "font-weight: 500; font-family: monospace; font-size: 16px;"
 
-        head.innerHTML = "<p>Market: " + dataRows[35] + "</p>"
+        head.innerHTML = "<p>Market: " + dataRows[36] + "</p>"
 
         li.appendChild(head);
         li.style = "list-style: none; margin-left: 25px; padding: none;"
@@ -385,18 +385,18 @@ var height = 250;
         const bedDetails = document.createElement('p');
           bedDetails.innerHTML = 
           
-          "<img src='" + dataRows[36] + "'height='250px' width='320px' style='padding-bottom: 25px;'>" +
-          "<p class='listTitle'>Beds: " + "<span class='listItems'>" + dataRows[27] + "</span></p>" +
-          "<p class='listTitle'>Baths: " + "<span class='listItems'>" + dataRows[28] + "</span></p>" +
-          "<p class='listTitle'>Garage: " + "<span class='listItems'>" + dataRows[29] + "</span></p>" +
-          "<p class='listTitle'>Pool: " + "<span class='listItems'>" + dataRows[30] + "</span></p>" +
-          "<p class='listTitle'>Sq. Foot: " + "<span class='listItems'>" + dataRows[31] + "</span></p>" +
-          "<p class='listTitle'>Lot Size: " + "<span class='listItems'>" + dataRows[32] + "</span></p>" +
-          "<p class='listTitle'>Year Built: " + "<span class='listItems'>" + dataRows[33] + "</span></p>" +
+          "<img src='" + dataRows[37] + "'height='250px' width='320px' style='padding-bottom: 25px;'>" +
+          "<p class='listTitle'>Beds: " + "<span class='listItems'>" + dataRows[28] + "</span></p>" +
+          "<p class='listTitle'>Baths: " + "<span class='listItems'>" + dataRows[29] + "</span></p>" +
+          "<p class='listTitle'>Garage: " + "<span class='listItems'>" + dataRows[30] + "</span></p>" +
+          "<p class='listTitle'>Pool: " + "<span class='listItems'>" + dataRows[31] + "</span></p>" +
+          "<p class='listTitle'>Sq. Foot: " + "<span class='listItems'>" + dataRows[32] + "</span></p>" +
+          "<p class='listTitle'>Lot Size: " + "<span class='listItems'>" + dataRows[33] + "</span></p>" +
+          "<p class='listTitle'>Year Built: " + "<span class='listItems'>" + dataRows[34] + "</span></p>" +
           "<p class='listTitle'>Wholesale: " + "<span class='listItems'>" + dataRows[8] + "</span></p>" +
           "<p class='listTitle'>After Repair Value: " + "<span class='listItems'>" + dataRows[7] + "</span></p>" +
           "<a href=" + dataRows[34] + "class='listTitle' style='font-weight: 600; font-size: 17px; font-style: italic; margin-left: 15px;' id='propPhotos'>Property Photos</a>" +
-          "<p class='listTitle'>Additional Notes: " + "<span class='listItems'>" + dataRows[26] + "</span></p>" +
+          "<p class='listTitle'>Additional Notes: " + "<span class='listItems'>" + dataRows[27] + "</span></p>" +
           "<div class='banner'><img src='/Logos/Keyglee Dispo Logo.png' style='height: 160px; width: 220px; margin-top: 15px; padding: 15px 50px 0px 50px;border-top: 2px ridge black;'></div>" 
 
           const sidePanel = document.getElementById("locations-panel")
@@ -476,7 +476,7 @@ var height = 250;
           console.log(response.data.results[0].formatted_address)
 
                //Content for info window of markers
-        const contentString = "<img src='" + dataRows[36] + "'height='170px' width='270px'>" + "<br>" + "<h4 style='font-style: italic;'>" + dataRows[6] + "</h4> <p>Wholesale Price: " + dataRows[8] + "<br><br>" + "ARV: " + dataRows[7] + "<br><br></p>" + "<a href=" + dataRows[34] + "class='listTitle' style='font-weight: 600; font-size: 13px; font-style: italic;' id='propPhotos'>Property Photos</a>" 
+        const contentString = "<img src='" + dataRows[37] + "'height='170px' width='270px'>" + "<br>" + "<h4 style='font-style: italic;'>" + dataRows[6] + "</h4> <p>Wholesale Price: " + dataRows[8] + "<br><br>" + "ARV: " + dataRows[7] + "<br><br></p>" + "<a href=" + dataRows[35] + "class='listTitle' style='font-weight: 600; font-size: 13px; font-style: italic;' id='propPhotos'>Property Photos</a>" 
 
                 // Create a marker for each location.
       const markers = locator.locations.map(function(location, markerLocations) {
