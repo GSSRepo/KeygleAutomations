@@ -1,9 +1,10 @@
+//Retrieve forms from Local Storage
 const dispoFormKeys = Object.values(localStorage); //
 
 const splicedForms = dispoFormKeys.splice(0);
 
-console.log(dispoFormKeys)
-console.log(splicedForms)
+// console.log(dispoFormKeys)
+// console.log(splicedForms)
 
 splicedForms.map(dispoAnswers => {const arr = JSON.parse("[" + dispoAnswers + "]"); //Loop through string; Wrap string in Array brackets; Parsing each Array
 console.log(dispoAnswers)
@@ -232,26 +233,26 @@ $(document).ready(function() {
 // }]
 
 
-const idString = [
-    'propertyAddress', 
-    'buyer',
-    'doubleEscrow',
-    'titleComp',
-    'titleOfficer',
-    'titleEmail',
-    'compNum',
-    'signerName',
-    'vester',
-    'contractPrice',
-    'EMD',
-    'closingCost',
-    'closeEscrow',
-    'closeSooner',
-    'exeEscrow',
-    'buyNum',
-    'docusign',
-    'userName'
-];
+// const idString = [
+//     'propertyAddress', 
+//     'buyer',
+//     'doubleEscrow',
+//     'titleComp',
+//     'titleOfficer',
+//     'titleEmail',
+//     'compNum',
+//     'signerName',
+//     'vester',
+//     'contractPrice',
+//     'EMD',
+//     'closingCost',
+//     'closeEscrow',
+//     'closeSooner',
+//     'exeEscrow',
+//     'buyNum',
+//     'docusign',
+//     'userName'
+// ];
 
 
 // Looping through Local Storage Dispo Forms; Shifting, taking off Unique ID for each form; Inputting Dispo Form Values in to the Table ------------------------------------------------------------
