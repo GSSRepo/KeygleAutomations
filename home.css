@@ -115,17 +115,10 @@ margin-left: 78px;
 }
 
 
-
-
 /*helps format Trinity title*/
 h1 {
   display: inline-block;
 }
-
-
-
-
-
 
 
 /* Hides second top title */
@@ -149,17 +142,17 @@ height: 780px;
 width: 450px;
 }
 
-    /*css for the footer*/
-    footer {
-      display: flex;
-      align-items: center;
-      justify-content: space-around;
-      position: inherit;
-      background-color: black;
-      bottom: 0%;
-      width: 100%;
-      margin-top: 15px;
-    }
+  /*css for the footer*/
+  footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: inherit;
+    background-color: #18344ade;
+    bottom: 0%;
+    width: 100%;
+    margin-top: 15px;
+  }
 
   /* Footer Headers/Hover */
 
@@ -337,6 +330,7 @@ display: block;
 /* width */
 ::-webkit-scrollbar {
   width: 1px;
+  -webkit-appearance: scrollbartrack-vertical;
 }
 
 /* Track */
@@ -358,10 +352,19 @@ display: block;
 /* Scroll bar to table end */
 
 
+.instaScroll {
+  display: flex;
+  display: flex;
+  background-color: rgb(191 219 243 / 22%);
+  padding: 10px;
+  border-radius: 15px;
+  overflow-y: scroll;
+}
+
 .placeBox {
 display: flex;
 position: absolute;
-background-color: #7d7d7d75;
+background-color: rgb(78 101 123 / 43%);
 margin-left: 35px;
 margin-top: 50px;
 height: 640px;
@@ -371,7 +374,7 @@ align-items: center;
 border-radius: 17px 17px 17px 17px;
 }
 
-.accountmentBoxTitle {
+.announcementBoxTitle {
 color:white;
 }
 
@@ -382,16 +385,15 @@ text-align: center;
 width:100%;
 }
 
-.accountmentBox{
+.announcementBox{
   display: flex;
   background-color: rgba(255, 255, 255, 0.741);
   width: 350px;
-  height: 515px;
+  height: 650px;
   overflow: auto;
   border-radius: 18px 18px 18px 18px;
   margin-bottom: 20px;
   align-items: center;
-  overflow: scroll;
   flex-direction: column;
   flex-wrap: wrap;
 }
@@ -1381,10 +1383,12 @@ margin-left: 10%;
 /*navigation bar css*/
 .navigation {
 display: flex;
-background-color: #374248;
+background-color: #32424c4d;
 overflow: hidden;
 align-items: center;
 height: 70px;
+padding-bottom: 6px;
+border-bottom: 1px solid white;
 }
 
 /*css for each separate item in the nav bar*/
