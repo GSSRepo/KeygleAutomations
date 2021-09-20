@@ -25,6 +25,10 @@ td.tdTitle {
   padding-left: 5px;
 }
 
+.bottomLogo {
+  width: 15%
+}
+
 tr.dispoData {
     background-color: rgb(211, 211, 211);
     display: table-row-group;
@@ -631,6 +635,39 @@ flex-direction: row;
 width: 50%;
 }
 
+/* For laptops Begin */
+
+@media screen and (max-width: 1500px) {
+  footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: inherit;
+    background-color: black;
+    bottom: -1%;
+    width: 100%;
+    margin-top: 15px;
+    }
+
+  div.footer {
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+  }
+
+  .bottomLogo {
+    width: 6%
+  }
+
+  .socialList {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+  }
+}
+
+/* For laptops End */
+
 @media screen and (max-width: 992px) {
 table {
 display: block;
@@ -658,6 +695,8 @@ margin-bottom: 0;
 width: 100%;
 margin-right: 10%;
 }
+
+
 
 
 /* Hamburger Menu Start */

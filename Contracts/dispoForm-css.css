@@ -1,6 +1,7 @@
 body {
   background: linear-gradient(90deg
   , #669bff87, #50c8c8a3);
+  margin:0;
     }
 
 
@@ -314,7 +315,36 @@ div.footer {
   display: flex;
   flex-direction: row;
   width: 30%;
-  margin-right: 10%;
+}
+
+
+@media screen and (max-width: 1500px) {
+  footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: inherit;
+    background-color: black;
+    bottom: -1%;
+    width: 100%;
+    margin-top: 15px;
+    }
+
+  div.footer {
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+  }
+
+  .bottomLogo {
+    width: 25%
+  }
+
+  .socialList {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+  }
 }
 
 @media screen and (max-width: 992px) {
@@ -1099,6 +1129,40 @@ div.dropdown div.dropdown-content {
         transition: .5s;
       }
 }
+
+
+/* For laptops Begin */
+
+@media screen and (max-width: 1500px) {
+  footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: inherit;
+    background-color: black;
+    bottom: -1%;
+    width: 100%;
+    margin-top: 15px;
+    }
+
+  div.footer {
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+  }
+
+  .bottomLogo {
+    width: 10%
+  }
+
+  .socialList {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+  }
+}
+
+/* For laptops End */
 
     
     /*footer contents*/

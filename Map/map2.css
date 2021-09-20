@@ -728,10 +728,50 @@ box-shadow: 0px 0px 15px 9px #eb8f18;
       bottom: -1%;
       width: 100%;
       margin-top: 15px;
-      margin-left: 10px;
+      margin-left: 0px;
     }
   
-  
+  /* For laptops Begin */
+
+@media screen and (max-width: 1500px) {
+
+  div.footer {
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+    margin-right:8%;
+  }
+
+  .bottomLogo {
+    width: 6%;
+    margin-bottom:-1px;
+  }
+
+  .socialList {
+    display: flex;
+    flex-direction: row;
+    height: 70%;
+    width:12%;
+    margin: 0;
+  }
+
+  .footerList {
+    margin-left: 15px;
+    font-size: 20px;
+    padding-bottom: 0px;
+    font-style: italic;
+    font-weight: 500;
+    text-align: center;
+    border-bottom: 0.5px solid rgb(158, 154, 154);
+    letter-spacing: 0.04em;
+  }
+
+  img.logo {
+    height:75px;
+  }
+}
+
+/* For laptops End */
   
   /* TopNav */
   
@@ -894,7 +934,7 @@ box-shadow: 0px 0px 15px 9px #eb8f18;
   div.footer {
     display: flex;
     flex-direction: row;
-    width: 55%;
+    width: 45%;
     position: inherit;
 }
 

@@ -603,6 +603,68 @@ div.footer {
   width: 50%;
 }
 
+
+/* Scroll bar to table begin */
+.table100 {
+  overflow-y: hidden;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #28b3e6;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(0, 0, 0);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(0, 217, 255);
+}
+/* Scroll bar to table end */
+  
+  /* For laptops Begin */
+  
+  @media screen and (max-width: 1500px) {
+    footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      position: inherit;
+      background-color: black;
+      bottom: -1%;
+      width: 100%;
+      margin-top: 15px;
+      }
+  
+    div.footer {
+      display: flex;
+      flex-direction: row;
+      width: 70%;
+    }
+  
+    .bottomLogo {
+      width: 6%
+    }
+  
+    .socialList {
+      display: flex;
+      flex-direction: row;
+      height: 100%;
+    }
+  }
+  
+  /* For laptops End */
+
 @media screen and (max-width: 992px) {
   table {
     display: block;
@@ -1027,9 +1089,6 @@ ul.socialList {
   }
 }
 
-footer {
-  position: fixed;
-}
 
 
 @media (max-width: 576px) {

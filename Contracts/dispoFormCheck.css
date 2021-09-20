@@ -114,6 +114,54 @@ body {
       background-color: black;
       display: flex;
   }
+
+  #submitDispoForm {
+    font-size: 30px;
+    padding: 7px 50px 7px 50px;
+    letter-spacing: 1px;
+    font-weight: 530;
+    background-size: 55px;
+    background-color: #f5f5f5
+}
+
+#submitDispoForm:hover {
+    color: #1DA1F2;
+    box-shadow: 0px 0px 15px 9px #1DA1F2;
+    cursor: pointer;
+}
+
+/* For laptops Begin */
+
+@media screen and (max-width: 1500px) {
+  footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: inherit;
+    background-color: black;
+    bottom: -1%;
+    width: 100%;
+    margin-top: 15px;
+    }
+
+  div.footer {
+    display: flex;
+    flex-direction: row;
+    width: 55%;
+  }
+
+  .bottomLogo {
+    width: 9%
+  }
+
+  .socialList {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+  }
+}
+
+/* For laptops End */
   
    /*css for logo*/
    .logo {
