@@ -3,6 +3,12 @@ background-color:#215576;
 margin: 0px;
 }
 
+figcaption {
+  display:block;
+  position:static;
+  color:white;
+}
+
 
 /*footer contents*/
 .foot {
@@ -322,10 +328,7 @@ margin-top: 20%;
 display: block;
 }
 
-/* Scroll bar to table begin */
-.table100 {
-  overflow-y: hidden;
-}
+
 
 /* width */
 ::-webkit-scrollbar {
@@ -355,7 +358,7 @@ display: block;
 .instaScroll {
   display: flex;
   display: flex;
-  background-color: rgb(191 219 243 / 22%);
+  background-color: rgb(191 219 243 / 11%);
   padding: 10px;
   border-radius: 15px;
   overflow-y: scroll;
