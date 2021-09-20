@@ -329,6 +329,34 @@ margin-top: 20%;
 display: block;
 }
 
+/* Scroll bar to table begin */
+.table100 {
+  overflow-y: hidden;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 1px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #28b3e65b;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.159);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 217, 255, 0.453);
+}
+/* Scroll bar to table end */
+
 
 .placeBox {
 display: flex;
@@ -355,16 +383,19 @@ width:100%;
 }
 
 .accountmentBox{
-display: flex;
-background-color: rgba(255, 255, 255, 0.741);
-width: 350px;
-height: 515px;
-overflow: auto;
-border-radius: 18px 18px 18px 18px;
-flex-direction: column;
-margin-bottom: 20px;
-align-items: center;
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.741);
+  width: 350px;
+  height: 515px;
+  overflow: auto;
+  border-radius: 18px 18px 18px 18px;
+  margin-bottom: 20px;
+  align-items: center;
+  overflow: scroll;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
+
 
 /* Footer */
 
@@ -675,8 +706,7 @@ width: 55%;
 }
 
 #instagramBox {
-height:650px;
-width: 375px;
+display: block;
 }
 
 /* For laptops Begin */
