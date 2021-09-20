@@ -3,6 +3,11 @@ background-color:#215576;
 margin: 0px;
 }
 
+nav {
+  position: fixed;
+    width: 100%;
+}
+
 figcaption {
   display:block;
   position:static;
@@ -369,7 +374,7 @@ display: flex;
 position: absolute;
 background-color: rgb(78 101 123 / 43%);
 margin-left: 35px;
-margin-top: 50px;
+margin-top: 105px;
 height: 640px;
 width: 390px;
 flex-direction: column;
@@ -1386,7 +1391,7 @@ margin-left: 10%;
 /*navigation bar css*/
 .navigation {
 display: flex;
-background-color: #32424c4d;
+background-color: #32424c00;
 overflow: hidden;
 align-items: center;
 height: 70px;
