@@ -45,6 +45,9 @@ li#navLogin.navItem {
   margin-bottom: 50px;
 }
 
+#box2.placeBox {
+  margin-left: 78px;
+}
 
   
     .footerList:hover {
@@ -209,6 +212,8 @@ li#navLogin.navItem {
       justify-content: center;
       align-items: center;
   }
+
+  
   
   /*For all basic radio buttons*/
   .radioButton {
@@ -329,7 +334,7 @@ li#navLogin.navItem {
   display: flex;
   position: absolute;
   background-color: #7d7d7d75;
-  margin-left: 30px;
+  margin-left: 35px;
   margin-top: 50px;
   height: 640px;
   width: 390px;
@@ -366,7 +371,7 @@ li#navLogin.navItem {
   div.footer {
     display: flex;
     flex-direction: row;
-    width: 50%;
+    width: 55%;
   }
   
   @media screen and (max-width: 992px) {
