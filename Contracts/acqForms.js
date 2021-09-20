@@ -1,23 +1,23 @@
 
 //Property photo upload for Map
 function previewFile() {
-    const propPhoto = document.querySelector('input[type=file]').files[0];
-    const output = document.getElementById('output_image');
-    const reader = new FileReader();
+const propPhoto = document.querySelector('input[type=file]').files[0];
+const output = document.getElementById('output_image');
+const reader = new FileReader();
 
 
-    reader.addEventListener("load", function () {
-        // convert image file to base64 string
-        output.src = reader.result;
+reader.addEventListener("load", function () {
+    // convert image file to base64 string
+    output.src = reader.result;
 
-        const imageOutput = output.src
-  
-      }, false);
-    
-      if (propPhoto) {
-        reader.readAsDataURL(propPhoto);
-      }
-  }
+    const imageOutput = output.src
+
+    }, false);
+
+if (propPhoto) {
+reader.readAsDataURL(propPhoto);
+}
+}
 
 
 //Your Full Name Form----------------

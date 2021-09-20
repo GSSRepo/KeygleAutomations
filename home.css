@@ -344,9 +344,9 @@ li#navLogin.navItem {
 
 .articleHeader {
     padding-bottom: 10px;
-    border-bottom: .5px groove black;
+    border-bottom: 5.5px double black;
     text-align: center;
-    border-radius: 45px 0px 25px 25px;
+    width:100%;
 }
 
 .accountmentBox{
@@ -358,6 +358,7 @@ li#navLogin.navItem {
     border-radius: 18px 18px 18px 18px;
     flex-direction: column;
     margin-bottom: 20px;
+    align-items: center;
 }
   
   /* Footer */
