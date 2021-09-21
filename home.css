@@ -38,7 +38,7 @@ text-align: right;
 /* Slidshow */
 
 #slideshow { 
-position: absolute;
+position: fixed;
 width: 100%;
 opacity: .5;
 height: 383px;
