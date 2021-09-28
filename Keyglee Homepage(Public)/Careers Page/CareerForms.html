@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>HR Career Forms</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contracts">
+  <link rel="stylesheet" href="CareerForms.css">
+  <script
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZO4-fjim18Q-HauZlwCvMCpZ_HUPjWA8&libraries=places&v=weekly&geometry&region=US"
+  async></script>
+</head>
+
+<body>
+<header>
+<!------------------------------------Navigation Bar Start--------------------------------------------------->
+
+<!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<nav role="navigation" >
+  <div id="menuToggle">
+        <input class="checkBox" type="checkbox" />
+        <span></span>
+        <span></span>
+        <span></span>
+      <ul class="navigation" id="menu">
+        <li class="navItem"><a href="/Sendgrid Stats/stats.html">Sendgrid Stats</a></li>
+        <li class="navItem"><a href='acq-table.html'>Acq Properties</a></li>
+        <li class="navItem"><a href='dispoForm.html'>Dispo Properties</a></li>
+        <li class="navItem"><a href="/map2.html">Map</a></li>
+        <div class="dropdown">
+            <li class="dropbtn"><a>Forms</i></a></li>
+            <div class="dropdown-content">
+              <a id="atlanta" href="acq-forms.html">Acquisition</a>
+              <a id="birmingham" href="dispoForm.html">Disposition</a>
+            </div>
+        </div>
+
+        <li style="text-align: center;width: 20%;margin-right: 0%;" class="topTitle"><h1><i style="color: white; font-size: 40px; letter-spacing: 1px;">Trinity</i></h1></li>
+        <!--directs to the login html page, no escape from login yet-->
+        <li style="width: 40%;text-align: right;margin-right: 0%; cursor: auto;" class="navItem" id="navLogin"><a href="/Login/login.html" class="login">Log In</a></li>
+        <br>
+        <li style="text-align: center;border-bottom: 2px solid black;border-radius: 5px;" class="topTitle2"><h1><i style="color: black; text-align: center; display:contents; letter-spacing: 2px;">Trinity</i></h1></li>
+      </ul>
+  </div>
+</nav>
+
+<!------------------------------------Navigation Bar End----------------------------------------------------->
+</header>
+
+
+<!------------------Job Submission Begin------------------------->
+<h2 style="text-align: center; margin: 0;">HR Job Submission</h2>
+
+<form action="submitJobForm">
+
+<!-- Job Title -->
+<div class="flex-container">
+  <h3 class="boxHeader">Job Title</h3>
+  <label>Type in position title</label>
+  <forms>
+    <input type="text" class="flex-item" id="jobTitle" name="jobtitle" value="">
+  </forms>
+  <div class="blueBox"></div>
+</div>
+
+
+<!--Job Requirements-->
+<div class="flex-container">
+  <h3 class="boxHeader">Job Requirements</h3>
+  <label>Type in Requirements</label>
+  <forms style="margin-bottom: 0%; margin-top: 1%">
+    <div class='divScroll'>
+      <input type="text" class='inputBox' id="jobRequirements1" name="jobRequirements1" value="">
+      <input type="text" class='inputBox' id="jobRequirements2" name="jobRequirements2" value="">
+      <input type="text" class='inputBox' id="jobRequirements3" name="jobRequirements3" value="">
+      <input type="text" class='inputBox' id="jobRequirements4" name="jobRequirements4" value="">
+      <input type="text" class='inputBox' id="jobRequirements5" name="jobRequirements5" value="">
+      <input type="text" class='inputBox' id="jobRequirements6" name="jobRequirements6" value="">
+      <input type="text" class='inputBox' id="jobRequirements7" name="jobRequirements7" value="">
+      <input type="text" class='inputBox' id="jobRequirements8" name="jobRequirements8" value="">
+      <input type="text" class='inputBox' id="jobRequirements9" name="jobRequirements9" value="">
+      <input type="text" class='inputBox' id="jobRequirements10" name="jobRequirements10" value="">
+      <input type="text" class='inputBox' id="jobRequirements11" name="jobRequirements11" value="">
+      <input type="text" class='inputBox' id="jobRequirements12" name="jobRequirements12" value="">
+
+    </div>
+  </forms>
+  <div class="blueBox"></div>
+</div>
+
+<!--Job Requirements-->
+<div class="flex-container">
+    <h3 class="boxHeader">Job Responsibilities</h3>
+    <label>Type in Responsibilities</label>
+    <forms style="margin-bottom: 0%; margin-top: 1%">
+      <div class='divScroll'>
+        <input type="text" class='inputBox' id="jobRespnsibilities1" name="jobRespnsibilities1" value="">
+        <input type="text" class='inputBox' id="jobRespnsibilities2" name="jobRespnsibilities2" value="">
+        <input type="text" class='inputBox' id="jobRespnsibilities3" name="jobRespnsibilities3" value="">
+        <input type="text" class='inputBox' id="jobRespnsibilities4" name="jobRespnsibilities4" value="">
+        <input type="text" class='inputBox' id="jobRespnsibilities5" name="jobRespnsibilities5" value="">
+        <input type="text" class='inputBox' id="jobRespnsibilities6" name="jobRespnsibilities6" value="">
+        <input type="text" class='inputBox' id="jobRespnsibilities7" name="jobRespnsibilities7" value="">
+        <input type="text" class='inputBox' id="jobRespnsibilities8" name="jobRespnsibilities8" value="">
+        <input type="text" class='inputBox' id="jobRespnsibilities9" name="jobRespnsibilities9" value="">
+        <input type="text" class='inputBox' id="jobRespnsibilities10" name="jobRespnsibilities10" value="">
+        <input type="text" class='inputBox' id="jobRespnsibilities11" name="jobRespnsibilities11" value="">
+        <input type="text" class='inputBox' id="jobRespnsibilities12" name="jobRespnsibilities12" value="">
+
+      </div>
+    </forms>
+    <div class="blueBox"></div>
+  </div>
+
+
+<!--About the Job-->
+<div class="flex-container">
+  <h3 class="boxHeader">About the Job</h3>
+  <label>Type a description here.</label>
+  <forms>
+      <textarea rows="8" name="About The Job" id="aboutTheJob" placeholder="Type here..." style="width: 40%;">
+      </textarea><br>
+  </forms>
+  <div class="blueBox"></div>
+</div>
+
+<!--An Ideal Candidate-->
+<div class="flex-container">
+    <h3 class="boxHeader">Idea Candidate</h3>
+    <label>Type in description for Ideal Candidate</label>
+    <forms style="margin-bottom: 0%; margin-top: 1%">
+      <div class='divScroll'>
+        <input type="text" class='inputBox' id="idealCandidate1" name="idealCandidate1" value="">
+        <input type="text" class='inputBox' id="idealCandidate2" name="idealCandidate2" value="">
+        <input type="text" class='inputBox' id="idealCandidate3" name="idealCandidate3" value="">
+        <input type="text" class='inputBox' id="idealCandidate4" name="idealCandidate4" value="">
+        <input type="text" class='inputBox' id="idealCandidate5" name="idealCandidate5" value="">
+        <input type="text" class='inputBox' id="idealCandidate6" name="idealCandidate6" value="">
+        <input type="text" class='inputBox' id="idealCandidate7" name="idealCandidate7" value="">
+        <input type="text" class='inputBox' id="idealCandidate8" name="idealCandidate8" value="">
+        <input type="text" class='inputBox' id="idealCandidate9" name="idealCandidate9" value="">
+        <input type="text" class='inputBox' id="idealCandidate10" name="idealCandidate10" value="">
+        <input type="text" class='inputBox' id="idealCandidate11" name="idealCandidate11" value="">
+        <input type="text" class='inputBox' id="idealCandidate12" name="idealCandidate12" value="">
+      </div>
+    </forms>
+    <div class="blueBox"></div>
+  </div>
+
+<!--Job Duties-->
+<div class="flex-container">
+    <h3 class="boxHeader">Job Duties</h3>
+    <label>Type in description for Job Duties</label>
+    <forms style="margin-bottom: 0%; margin-top: 1%">
+      <div class='divScroll'>
+        <input type="text" class='inputBox' id="jobDuties1" name="jobDuties1" value="">
+        <input type="text" class='inputBox' id="jobDuties2" name="jobDuties2" value="">
+        <input type="text" class='inputBox' id="jobDuties3" name="jobDuties3" value="">
+        <input type="text" class='inputBox' id="jobDuties4" name="jobDuties4" value="">
+        <input type="text" class='inputBox' id="jobDuties5" name="jobDuties5" value="">
+        <input type="text" class='inputBox' id="jobDuties6" name="jobDuties6" value="">
+        <input type="text" class='inputBox' id="jobDuties7" name="jobDuties7" value="">
+        <input type="text" class='inputBox' id="jobDuties8" name="jobDuties8" value="">
+        <input type="text" class='inputBox' id="jobDuties9" name="jobDuties9" value="">
+        <input type="text" class='inputBox' id="jobDuties10" name="jobDuties10" value="">
+        <input type="text" class='inputBox' id="jobDuties11" name="jobDuties11" value="">
+        <input type="text" class='inputBox' id="jobDuties12" name="jobDuties12" value="">
+      </div>
+    </forms>
+    <div class="blueBox"></div>
+  </div>
+
+
+
+<!--Full Time or Part Time-->
+<div class="flex-container">
+  <h3 class="boxHeader">Full Time or Part Time?</h3>
+  <label>Choose an Option</label>
+  <forms class="offerButtons">
+      <div class="radioButton">
+          <input type="radio" id="fullTime" name="Full-Time" value="Full-Time" style="margin: 10px">Full-Time</input>
+      </div>
+      <div class="radioButton">
+          <input type="radio"id="partTime" name="Part-Time" value="Part-Time"  style="margin: 10px">Part-Time</input>
+      </div>
+  </forms>
+  <div class="blueBox"></div>
+</div>
+
+<!--Location-->
+<div class="flex-container">
+  <h3 class="boxHeader">Job Location</h3>
+  <label style="text-align: center; margin-bottom: 3%;">Type in Location</label>
+  <forms><input type="text" id="location" placeholder="location" class="flex-item"></forms>
+  <div class="blueBox"></div>
+</div>
+
+<!--Schedule-->
+<div class="flex-container">
+  <h3 class="boxHeader">Job Schedule?</h3>
+  <label style="text-align: center; margin-bottom: 3%;">Type in Job Schedule</label>
+  <forms><input type="text" id="jobSchedule" class="flex-item"></forms>
+  <div class="blueBox"></div>
+</div>
+
+<!--Pay-->
+<div class="flex-container">
+  <h3 class="boxHeader">Pay?</h3>
+  <label>Type in Pay/Description</label>
+  <forms><input type="text" id="pay" class="flex-item"></forms>
+  <div class="blueBox"></div>
+</div>
+
+<!--Date-->
+<div class="flex-container">
+    <h3 class="boxHeader">Enter Today's Date</h3>
+    <label>Example: 04/27/2021</label>
+    <forms><input type="text" placeholder="04/27/2021" id="date" class="flex-item"></forms>
+    <div class="blueBox"></div>
+  </div>
+
+
+<div class="submitBox">
+<input type="submit" id="submitHRForm" value="Submit" style="width: 175px; padding: 10px; margin-bottom: 15px;">
+</div>
+
+<div style='height:10em; width:1px'>
+    <div></div>
+</div>
+
+<footer>
+  <div class='bottomLogo'>
+    <img class="logo" src="/Logos/Keyglee Dispo Logo.png" alt="KeyGlee Logo" width="100" height="93">
+  </div>
+  <div class="footer">
+      <a href="/home.html" class="foot">
+      <h3 class="footerList">Home</h3>
+      </a>
+      <a href="https://theglobalsystemsolutions.itclientportal.com/ClientPortal/LandingPage/LandingPage.aspx?fromLogin=1" target="blank" class="foot">
+          <h3 class="footerList">IT Support</h3>
+      </a>
+      <a href="https://podio.com/home" class="foot">
+          <h3 class="footerList">Podio</h3>
+      </a>
+
+      <a href="https://app.close.com/login/" class="foot">
+          <h3 class="footerList">Close</h3>
+      </a>
+      <a href="https://gms.prismhr.com/gms.corp/dbweb.asp?dbcgm=1" class="foot">
+        <h3 class="footerList">GMS Portal</h3>
+    </a>
+    <a href="#" class="foot">
+      <h3 class="footerList">Keyglee Newsletter</h3>
+  </a>
+  </div>
+  <ul class="socialList">
+      <li><a href="https://www.instagram.com/keygleedispo/?hl=en"><i class="fa fa-instagram" aria-hidden="true"></i></a></div></li>
+      <li><a href="https://www.facebook.com/keygleedispo"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+      <li><a href="https://twitter.com/keygleedispo"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+      <li><a href="https://www.linkedin.com/company/aem-real-estate-group/"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+  </ul>
+</footer>
+
+<!-------------------------------------------------------------------Scripts------------------------------------------------>
+
+<!-- <script src="../node_modules/file-saver/src/FileSaver.js"></script> -->
+<script src="CareerForms.js"></script>
+
+</body>
+</html>

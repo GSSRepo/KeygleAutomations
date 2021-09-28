@@ -1156,121 +1156,118 @@ body {
   }
   
       
-      /*footer contents*/
-      .foot {
-        color: white;
-        text-decoration: none;
-        padding-right: 4%;
-        white-space: nowrap;
-      }
-      
-      /*footer social media icon list*/
-      .socialList {
-        display: flex; 
-        flex-direction: row;     
-        height: 100%;
-      }
-    
-      /* Footer Headers/Hover */
-    
-      .footerList {
-        margin-left: 30px;
-        font-size: 20px;
-        padding-bottom: 0px;
-        font-style: italic;
-        font-weight: 500;
-        text-align: center;
-        border-bottom: 0.5px solid rgb(158, 154, 154);
-        letter-spacing: 0.04em;
-      }
-    
-      .footerList:hover {
-        color: #2ca1db;
-        border-bottom: 0.5px solid #2ca1db;
-      }
-      
-      /*not using this*/
-      /*light background for buttons*/
-      .backLight {
-        border: 1px solid rgba(0, 0, 0, 0);
-        border-radius: 50%;
-        width: 100px;
-        height: 100px;
-        background: radial-gradient(rgb(100, 100, 100) 40%, rgb(27, 27, 27), black);
-        transition: all 1s;
-        /*
-        width:130px;
-        height:130px;
-        background: radial-gradient(rgb(100, 100, 100)25%, rgb(10, 10, 10), black);
-        */
-      }
-      
-      /*footer list individuals*/
-      .socialList li {
-        list-style: none;
-        margin: 6px;
-      }
-      
-      /*footer social media icons*/
-      .socialList li a {
-        position: relative;
-        width: 39px;
-        height: 40px;
-        display: block;
-        text-align: center;
-        border-radius: 50%;
-        padding: 0px;
-        box-sizing: border-box;
-        text-decoration: none;
-        background: linear-gradient( 
-    0deg
-     , #ddd, #fff);
-        transition: .75s;
-      }
-      
-      .socialList li a:hover {
-        
-        text-decoration:none;
-      }
-      
-      /*social media icons themselves*/
-      .socialList li a .fa {
-        width: 100%;
-        height: 100%;
-        display: contents;
-        background: linear-gradient( 
-    0deg
-     , #fff, #ddd);
-        border-radius: 50%;
-        line-height: calc(60px - 18px);
-        font-size: 22px;
-        color: #262626;
-        transition: .5s;
-      }
+   /*footer contents*/
+   .foot {
+    color: white;
+    text-decoration: none;
+    padding-right: 4%;
+    white-space: nowrap;
+  }
+  
+  /*footer social media icon list*/
+  .socialList {
+    display: flex; 
+    flex-direction: row;     
+    height: 100%;
+  }
   
   
-      
-      
-      /*helps format Trinity title*/
-      h1 {
-        display: inline-block;
-      }
-      
+  li#navLogin.navItem {
+  text-align: right;
+  }
   
-      
-      
-      /*css for the footer*/
-      footer {
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        position: inherit;
-        background-color: black;
-        bottom: -1%;
-        width: 100%;
-        margin-top: 15px;
-      }
-      
+  /* Slidshow */
+  
+  #slideshow { 
+  position: fixed;
+  width: 100%;
+  padding: 24px;
+  box-shadow: 0 0 20px rgb(0 0 0 / 40%);
+  z-index: -2;
+  }
+  
+  .images {
+      opacity: .5;
+  }
+
+  #slideshow > div { 
+  position: absolute; 
+  top: 10px; 
+  left: 10px; 
+  right: 1px; 
+  margin-right: 60px;
+  bottom: 10px; 
+  margin-bottom: 50px;
+  }
+  
+  #box2.placeBox {
+  margin-left: 78px;
+  }
+  
+  
+  .footerList:hover {
+    color: #2ca1db;
+    border-bottom: 0.5px solid #2ca1db;
+  }
+  
+  /*not using this*/
+  /*light background for buttons*/
+  .backLight {
+    border: 1px solid rgba(0, 0, 0, 0);
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(rgb(100, 100, 100) 40%, rgb(27, 27, 27), black);
+    transition: all 1s;
+    /*
+    width:130px;
+    height:130px;
+    background: radial-gradient(rgb(100, 100, 100)25%, rgb(10, 10, 10), black);
+    */
+  }
+  
+  /*footer list individuals*/
+  .socialList li {
+    list-style: none;
+    margin: 6px;
+  }
+  
+  /*footer social media icons*/
+  .socialList li a {
+    position: relative;
+    width: 39px;
+    height: 40px;
+    display: block;
+    text-align: center;
+    border-radius: 50%;
+    padding: 0px;
+    box-sizing: border-box;
+    text-decoration: none;
+    background: linear-gradient( 
+  0deg
+  , #ddd, #fff);
+    transition: .75s;
+  }
+  
+  .socialList li a:hover {
+    
+    text-decoration:none;
+  }
+  
+  /*social media icons themselves*/
+  .socialList li a .fa {
+    width: 100%;
+    height: 100%;
+    display: contents;
+    background: linear-gradient( 
+  0deg
+  , #fff, #ddd);
+    border-radius: 50%;
+    line-height: calc(60px - 18px);
+    font-size: 22px;
+    color: #262626;
+    transition: .5s;
+  }
       
       
   /* TopNav */
@@ -1481,3 +1478,17 @@ body {
             color: #1DA1F2;
             box-shadow: 0px 0px 15px 9px #1DA1F2;
         }
+
+
+
+
+body {
+background-color:#215576;
+margin: 0px;
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+}
